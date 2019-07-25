@@ -1,7 +1,10 @@
 # SUMO
-# This includes SUMO offical packages as well as Dr. Sookyoung Lee's code for ATOM paper.
+ 
+This includes **SUMO offical packages** as well as **Dr. Sookyoung Lee's code** for ATOM paper.
+
 
 Check Google Drive for introductions about how to run her code provided by Sookyoung. 
+
 
 Files tree:
 
@@ -23,6 +26,9 @@ Files tree:
 |- - - - dua.rou.xml||
 |- - - - output.xml|Records output.|
 |- - - - summary.xml|Records output.|
+|- - - - firstrun|The dir I created to backup my firstrun results.|
+|- - - - sumolib||
+|- - - - traci||
 |- - - fuzzy||
 |- - - gps||
 |- - - tapioca||
