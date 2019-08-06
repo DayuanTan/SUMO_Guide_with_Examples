@@ -9,6 +9,7 @@ calling  duarouter -n b4atom.net.xml -r trips.trips.xml -o atom.rou.xml --ignore
 Success.
 ```
 
+------
 ```
 dyt@ubuntu:/usr/share/sumo/sookyoung/atom/atom after revision$ duarouter --net=b4.net.xml -r atom.rou.xml --output-file=dua.rou.xml --xml-validation never
 ```
@@ -18,6 +19,7 @@ Quitting (on error).
 dyt@ubuntu:
 ```
 
+------
 ```
 dyt@ubuntu:/usr/share/sumo/sookyoung/atom/atom after revision$ duarouter --net=b4atom.net.xml -r atom.rou.xml --output-file=dua.rou.xml --xml-validation never
 ```
@@ -25,6 +27,7 @@ dyt@ubuntu:/usr/share/sumo/sookyoung/atom/atom after revision$ duarouter --net=b
 Success.up to time step: 3600.00
 ```
 
+------
 ```
 dyt@ubuntu:/usr/share/sumo/sookyoung/atom/atom after revision$ python atom.py 
 ```
