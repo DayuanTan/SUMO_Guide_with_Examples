@@ -1,11 +1,12 @@
 # 20190725 First try to run
 # The commands I used:
 
+
 ```
 dyt@ubuntu:/usr/share/sumo/sookyoung/atom/atom after revision$ python /usr/share/sumo/tools/randomTrips.py -n b4atom.net.xml -r atom.rou.xml --period 1
+```
+```
 calling  duarouter -n b4atom.net.xml -r trips.trips.xml -o atom.rou.xml --ignore-errors --begin 0 --end 3600 --no-step-log --no-warnings
-```
-```
 Success.
 ```
 
