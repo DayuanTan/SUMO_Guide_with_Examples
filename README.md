@@ -34,3 +34,16 @@ Files tree:
 |- - - tapioca|d||
 |- - logit.zip|f|Code about other algorithms provided by Sookyoung|
 |- - logit|d|Unzip from logit.zip|
+
+
+------
+
+# My simple SUMO example
+
+I set up a simple SUMO, it's friednly to beginners. You can find it [here](./dayuan/aSimpleSumo.md).
+
+Few screenshots about it:
+
+<img src="./dayuan/imgs/hello_dyt/1.png" width=33%/>
+<img src="./dayuan/imgs/hello_dyt/2.png" width=33%/>
+<img src="./dayuan/imgs/hello_dyt/3.png" width=33%/>
