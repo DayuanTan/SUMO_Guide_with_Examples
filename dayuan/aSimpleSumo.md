@@ -3,6 +3,7 @@
 I tried a simple SUMO after reading [SUMO official Documents](https://sumo.dlr.de/wiki/SUMO_User_Documentation#Introduction).
 
 Firstly, I set up a road net like this:
+<img src="./imgs/hello_dyt/structure.png" />
 
 There are 12 vertexes and 17 road segments. I only setup the direction from up-left to bottom-right. The directions are also indicated in screenshots.
 
