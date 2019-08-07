@@ -44,6 +44,6 @@ I set up a simple SUMO, it's friednly to beginners. You can find it [here](./day
 
 Few screenshots about it:
 
-<img src="./dayuan/imgs/hello_dyt/1.png" width=20%/>
-<img src="./dayuan/imgs/hello_dyt/2.png" width=20%/>
-<img src="./dayuan/imgs/hello_dyt/3.png" width=20%/>
+<img src="./dayuan/imgs/hello_dyt/1.png" width=300/>
+<img src="./dayuan/imgs/hello_dyt/2.png" width=300/>
+<img src="./dayuan/imgs/hello_dyt/3.png" width=300/>
