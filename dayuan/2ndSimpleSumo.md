@@ -75,6 +75,47 @@ In this parameter file ["dayuan.netccfg"](../docs/tutorial/quickstart_dyt/data/d
 As shown in SUMO project files structure:
 <img src="./imgs/structure.gif"/>
 
+BTW, If u-turn movements are not allowed, the command <no-turnarounds value="true"/> should be added to the configuration file. As stated previously, the prohibition of u-turn movements can only be conducted globally.
+
+## Step 4: Traffic demand
+
+Then I set up traffic flow information into ["dayuan.rou.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.rou.xml).
+
+**Firstly** I define 4 types of cars. BTW the sigma parameter means all drivers are 50% perfect in driving.
+
+Vehicle type related attributes include:
+
+- (a) id: ID of the vehicle type, defined by users with numbers, word strings or both;
+- (b) accel: maximum acceleration of the respective vehicle type (in m/s2);
+- (c) decal: maximum deceleration of the respective vehicle type (in m/s2);
+- (d) sigma: drivers’ imperfection in driving (between 0 and 1);
+- (e) length: vehicle length (in meters);
+- (f) maxSpeed: maximum vehicular velocity (in m/s);
+- (g) color: color of the vehicle type. It is defined with 3 numbers (between 0 and 1) for red, green and blue respectively. Values are separated by comma and in quotes with no space between the values. For example, 1,0,0 represents the red color, 0,1,0 represents green color and 0,0,1 represents blue color.
+- The sequence of the attributes can be changed. The attribute sigma is assigned as 0.5 for all vehicle types.
+
+**Secondly** 12 routes are assigned to let each vehicle to select from.
+
+Following the vehicle type information traffic route data need to be defined as well. The input attributes include:
+
+- (a) id: ID of a certain route and defined by users with numbers, word strings or both.
+- (b) edges: The sequence of the names of the links, composing the defined route.
+
+
+**Thirdly** it's the traffic flow (traffic demand) design.
+
+Traffic demand data are defined with four attributes:
+
+- (a) depart: departure time of a certain vehicle.
+- (b) id: ID of a certain vehicle and defined by users with numbers, word strings or both.
+- (c) route: the route used by the defined vehicle;
+- (d) type: ID of the defined vehicle type.
+
+## Step 5: Run
+
+All having all above, we can run the simulation using this command `sumo-gui -c dayuan.sumocfg`. 
+<img src="./imgs/2nd/4.gif" />
+
 
 
 ----
