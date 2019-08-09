@@ -116,7 +116,12 @@ Traffic demand data are defined with four attributes:
 All having all above, we can run the simulation using this command `sumo-gui -c dayuan.sumocfg`. 
 <img src="./imgs/2nd/4.gif" />
 
+## Result
 
+Few screenshots of runing the simulation:
+<img src="./imgs/2nd/r1.png"/>
+<img src="./imgs/2nd/r2.png">
+<img src="./imgs/2nd/r3.png">
 
 ----
 Reference:
