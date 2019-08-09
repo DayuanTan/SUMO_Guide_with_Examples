@@ -135,6 +135,6 @@ FYI, in ["dayuan.settings.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.sett
 ----
 Reference:
 
-[1] https://sumo.dlr.de/wiki/Tutorials/Quick_Start_old_style (better, used configuration files to set up.)
+[1] https://sumo.dlr.de/wiki/Tutorials/Quick_Start_old_style (Better, used configuration files to set up.)
 
-[2] https://sumo.dlr.de/wiki/Tutorials/quick_start (Use gui to set up but not easy to do.)
+[2] https://sumo.dlr.de/wiki/Tutorials/quick_start (Use SUMO GUI to set up but not easy to do.)
