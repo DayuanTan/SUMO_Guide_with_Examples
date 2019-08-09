@@ -12,7 +12,57 @@ This is a bit more complex SUMO example based on the [first simple sumo](./aSimp
 I want to implement this road network:
 
 
-<img src="./imgs/2ndSimpleSumoRoadNet.png" />
+<img src="./imgs/2nd/2ndSimpleSumoRoadNet.png" />
+
+Step 1:
+    
+All nodes are set up in ["dayuan.nod.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.nod.xml) file. In this file, each node is assigned with its coordinates (x,y).
+
+The definitions of the attributes in the node file are listed below.
+
+- (a) id: the ID name of the node, defined by users with numbers, word strings or both.
+- (b) x: the x-coordinate location of the defined node (in meters)
+- (c) y: the y-coordinate location of the defined node (in meters)
+- (d) type: the signal control type of the defined node. It is an optional attribute and defined with priority and traffic_light for unsignalized and signalized intersections respectively.
+
+Step 2:
+
+All edges (road segments, or called "link" in SUMO) are set up in ["dayuan.edg.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.edg.xml) file.
+
+The defined attributes include:
+
+- (a) id: link ID, defined by users with numbers, word strings or both.
+- (b) from: ID of the upstream node of the respective link.
+- (c) to: ID of the downstream node of the respective link.
+- (d) type: ID of the link type, defined in the link type file.
+- (e) allow/disallow: ID of the vehicle group which is defined in the SUMO and might not be identical with the vehicle types defined by users. 
+
+The definiton of those types are set up in ["dayuan.typ.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.typ.xml) file.
+
+Four attributes are defined:
+
+- (a) id: defined by users with numbers, word strings or both.
+- (b) priority: driving priority based on traffic regulations and is defined with numbers. The higher the number, the higher the priority for the respective road. The priority information will override information from the node file, if both of them exist.
+- (c) numLanes: number of lanes on the respective road.
+- (d) speed: maximum allowed link speed.
+- Types (a) and (b) are for the eastbound and westbound roads with 3 lanes and 2 lanes respectively. Type (c) is then for the northbound and southbound roads with a lower priority.
+
+
+Step 3:
+
+Since each edge has 3 or 2 lanes, they can not connect to each other freely. The connection between each lanes are set up in ["dayuan.con.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.con.xml) file.
+
+The meaning of each attribute is as following:
+
+- (a) from: ID of the link which the traffic movements will be specified.
+- (b) to: ID of the link which is the downstream link of the above defined link.
+- (c) fromLane/toLane: lane number of the defined link in (a) and the lane number of the link in (b), which are connected.
+
+For example, the first row <connection from="L2" to="L12" fromLane="0" toLane="0"/> and the second row <connection from="L2" to="L12" fromLane="0" toLane="1"/> in ["dayuan.con.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.con.xml) means that the traffic on Lane 0 of Link L2 will only use Lanes 0 and 1 of Link L12 (see first Figure below). In contrast, second Figure below shows the allowed traffic movements based on the default setting as reference. Another example is given in third Figure below for the specification of the traffic movements on Links L9, L12 and L16, defined in ["dayuan.con.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.con.xml).
+
+<img src="./imgs/2nd/1.png">
+<img src="./imgs/2nd/2.png">
+<img src="./imgs/2nd/3.png">
 
 
 ----
