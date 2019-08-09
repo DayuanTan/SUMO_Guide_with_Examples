@@ -32,15 +32,15 @@ netconvertBinary = checkBinary('netconvert')
 sumoBinary = checkBinary('sumo')
 # build/check network
 retcode = subprocess.call(
-    [netconvertBinary, "-c", "data/quickstart.netccfg"], stdout=sys.stdout, stderr=sys.stderr)
+    [netconvertBinary, "-c", "data/dayuan.netccfg"], stdout=sys.stdout, stderr=sys.stderr)
 try:
-    shutil.copy("data/quickstart.net.xml", "net.net.xml")
+    shutil.copy("data/dayuan.net.xml", "net.net.xml")
 except IOError:
-    print("Missing 'quickstart.net.xml'")
+    print("Missing 'dayuan.net.xml'")
 print(">> Netbuilding closed with status %s" % retcode)
 sys.stdout.flush()
 # run simulation
 retcode = subprocess.call(
-    [sumoBinary, "-c", "data/quickstart.sumocfg", "--no-step-log"], stdout=sys.stdout, stderr=sys.stderr)
+    [sumoBinary, "-c", "data/dayuan.sumocfg", "--no-step-log"], stdout=sys.stdout, stderr=sys.stderr)
 print(">> Simulation closed with status %s" % retcode)
 sys.stdout.flush()
