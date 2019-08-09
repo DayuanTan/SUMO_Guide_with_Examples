@@ -1,9 +1,0 @@
-Tips to work on real road simulation with logit option
---------------------------------------------------------
-
-1. the only difference made is in the duarouter command. we have added an option --route.choice.algorithm logit
-2. So when you run, as done before during real road simulation runs, run three algorithms together.
-3. open atom.sh, change the period value. we have option to run the three algorithms together as you can see there
-4. open 3 algorithms xx.sumo.cfg files and  xx.add.xml files. change file name for each run as outputxx0_2_1.xml, where xx represent the algorithm name, 0_2 is the IAR value and _1 represent the first run so for next run make it _2. and for summary file replace output with summary.
-5. run the simulation with ./atom.sh command and after each run note down inserted,loaded,route length and duration values.
-6. after each IAR runs are over, make folder in the name of that IAR and move output and summary files of that IAR to the folder for easy usage and no confusions.
