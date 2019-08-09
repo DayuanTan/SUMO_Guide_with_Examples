@@ -75,7 +75,7 @@ In this parameter file ["dayuan.netccfg"](../docs/tutorial/quickstart_dyt/data/d
 As shown in SUMO project files structure:
 <img src="./imgs/structure.gif"/>
 
-BTW, If u-turn movements are not allowed, the command <no-turnarounds value="true"/> should be added to the configuration file. As stated previously, the prohibition of u-turn movements can only be conducted globally.
+BTW, If u-turn movements are not allowed, the command `<no-turnarounds value="true"/>` should be added to the configuration file. As stated previously, the prohibition of u-turn movements can only be conducted globally.
 
 ## Step 4: Traffic demand
 
