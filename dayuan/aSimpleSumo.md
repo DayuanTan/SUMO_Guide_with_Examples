@@ -11,13 +11,13 @@ Those vertexes, called nodes in SUMO, are set up in the configuration file "[day
 
 Road segments are set up in the configuration file "[dayuan.edg.xml](../docs/tutorial/hello_dyt/data/dayuan.edg.xml)".
 
-Then I used command `netconvert --node-files=dayuan.nod.xml --edge-files=dayuan.edg.xml --output-file=dayuan.net.xml` to create the road network file, which will be stored in "[dayuan.net.xml](../docs/tutorial/hello_dyt/data/dayuan.net.xml)".
+Then I used command `netconvert --node-files=dayuan.nod.xml --edge-files=dayuan.edg.xml --output-file=dayuan.net.xml` inder the directory "[docs/tutorial/hello_dyt/data](../docs/tutorial/hello_dyt/data)" to create the road network file, which will be stored in "[dayuan.net.xml](../docs/tutorial/hello_dyt/data/dayuan.net.xml)".
 
 Routes are set up in configuration file "[dayuan.rou.xml](../docs/tutorial/hello_dyt/data/dayuan.rou.xml)". I assigned 5 routes. 22 Vehicles will start at up-left node and head to bottom-down node. One vehicle starts per second. They use one of those 5 routes. 
 
 "[dayuan.sumocfg](../docs/tutorial/hello_dyt/data/dayuan.sumocfg)" and "[dayuan.settings.xml](../docs/tutorial/hello_dyt/data/dayuan.settings.xml)" are also needed when you use `sumo-gui`.
 
-Then just run command `sumo-gui -c hello.sumocfg`, you will see the SUMO GUI window. Click start then the simulation will begin.
+Then just run command `sumo-gui -c hello.sumocfg` under same directory, you will see the SUMO GUI window. Click start then the simulation will begin.
 
 Here are some screenshots of this simulation.
 <img src="./imgs/hello_dyt/1.png"/>
