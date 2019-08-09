@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <routes>
-  <vType accel="3.0" decel="6.0" id="CarA" length="5.0" minGap="2.5" maxSpeed="50.0" sigma="0.5" />
-  <vType accel="2.0" decel="6.0" id="CarB" length="7.5" minGap="2.5" maxSpeed="50.0" sigma="0.5" />
-  <vType accel="1.0" decel="5.0" id="CarC" length="5.0" minGap="2.5" maxSpeed="40.0" sigma="0.5" />
-  <vType accel="1.0" decel="5.0" id="CarD" length="7.5" minGap="2.5" maxSpeed="30.0" sigma="0.5" />
+  <vType accel="3.0" decel="6.0" id="CarA" length="2.0" minGap="2.5" maxSpeed="50.0" sigma="0.5" />
+  <vType accel="2.0" decel="6.0" id="CarB" length="3.5" minGap="2.5" maxSpeed="50.0" sigma="0.5" />
+  <vType accel="1.0" decel="5.0" id="CarC" length="2.0" minGap="2.5" maxSpeed="40.0" sigma="0.5" />
+  <vType accel="1.0" decel="5.0" id="CarD" length="3.5" minGap="2.5" maxSpeed="30.0" sigma="0.5" />
 
   <route id="route01" edges="D2 L2 L12 L10 L7 D7"/>
   <route id="route02" edges="D2 L2 L12 L15 L18 L5 D5"/>
