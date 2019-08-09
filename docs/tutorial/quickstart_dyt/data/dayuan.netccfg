@@ -6,14 +6,14 @@
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
-        <node-files value="quickstart.nod.xml"/>
-        <edge-files value="quickstart.edg.xml"/>
-        <connection-files value="quickstart.con.xml"/>
-        <type-files value="quickstart.typ.xml"/>
+        <node-files value="dayuan.nod.xml"/>
+        <edge-files value="dayuan.edg.xml"/>
+        <connection-files value="dayuan.con.xml"/>
+        <type-files value="dayuan.typ.xml"/>
     </input>
 
     <output>
-        <output-file value="quickstart.net.xml"/>
+        <output-file value="dayuan.net.xml"/>
     </output>
 
     <junctions>

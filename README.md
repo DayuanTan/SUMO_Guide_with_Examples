@@ -21,6 +21,11 @@ Files tree:
 
 
 ------
+# fFle structure for a SUMO project 
+
+<img src="./dayuan/imgs/structure.gif"/>
+
+------
 
 # [My simple SUMO example](./dayuan/aSimpleSumo.md)
 
