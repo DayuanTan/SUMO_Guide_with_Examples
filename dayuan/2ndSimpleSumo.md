@@ -123,6 +123,15 @@ Few screenshots of runing the simulation:
 <img src="./imgs/2nd/r2.png">
 <img src="./imgs/2nd/r3.png">
 
+FYI, in ["dayuan.settings.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.settings.xml) I set the run time from 54000 to 54100. You can change it as you want.
+
+```
+    <time>
+        <begin value="54000"/>
+        <end value="54100"/>
+    </time>
+```
+
 ----
 Reference:
 
