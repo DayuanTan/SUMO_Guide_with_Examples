@@ -14,7 +14,7 @@ I want to implement this road network:
 
 <img src="./imgs/2nd/2ndSimpleSumoRoadNet.png" />
 
-Step 1:
+## Step 1: Nodes
     
 All nodes are set up in ["dayuan.nod.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.nod.xml) file. In this file, each node is assigned with its coordinates (x,y).
 
@@ -25,7 +25,7 @@ The definitions of the attributes in the node file are listed below.
 - (c) y: the y-coordinate location of the defined node (in meters)
 - (d) type: the signal control type of the defined node. It is an optional attribute and defined with priority and traffic_light for unsignalized and signalized intersections respectively.
 
-Step 2:
+## Step 2: Edges (links)
 
 All edges (road segments, or called "link" in SUMO) are set up in ["dayuan.edg.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.edg.xml) file.
 
@@ -48,7 +48,7 @@ Four attributes are defined:
 - Types (a) and (b) are for the eastbound and westbound roads with 3 lanes and 2 lanes respectively. Type (c) is then for the northbound and southbound roads with a lower priority.
 
 
-Step 3:
+## Step 3: Connections between lanes
 
 Since each edge has 3 or 2 lanes, they can not connect to each other freely. The connection between each lanes are set up in ["dayuan.con.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.con.xml) file.
 
@@ -58,11 +58,23 @@ The meaning of each attribute is as following:
 - (b) to: ID of the link which is the downstream link of the above defined link.
 - (c) fromLane/toLane: lane number of the defined link in (a) and the lane number of the link in (b), which are connected.
 
-For example, the first row <connection from="L2" to="L12" fromLane="0" toLane="0"/> and the second row <connection from="L2" to="L12" fromLane="0" toLane="1"/> in ["dayuan.con.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.con.xml) means that the traffic on Lane 0 of Link L2 will only use Lanes 0 and 1 of Link L12 (see first Figure below). In contrast, second Figure below shows the allowed traffic movements based on the default setting as reference. Another example is given in third Figure below for the specification of the traffic movements on Links L9, L12 and L16, defined in ["dayuan.con.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.con.xml).
+For example, the first row `<connection from="L2" to="L12" fromLane="0" toLane="0"/>` and the second row `<connection from="L2" to="L12" fromLane="0" toLane="1"/>` in ["dayuan.con.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.con.xml) means that the traffic on Lane 0 of Link L2 will only use Lanes 0 and 1 of Link L12 (see first Figure below). In contrast, second Figure below shows the allowed traffic movements based on the default setting as reference. Another example is given in third Figure below for the specification of the traffic movements on Links L9, L12 and L16, defined in ["dayuan.con.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.con.xml).
 
 <img src="./imgs/2nd/1.png">
 <img src="./imgs/2nd/2.png">
 <img src="./imgs/2nd/3.png">
+
+## Step 4: Network generation
+
+All 4 files above will be used to generate the network file ["dayuan.net.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.net.xml) using `netconvert` command. 
+
+Before that, let set up all parameters into 1 file ["dayuan.netccfg"](../docs/tutorial/quickstart_dyt/data/dayuan.netccfg) since there are too much parameters. 
+
+In this parameter file ["dayuan.netccfg"](../docs/tutorial/quickstart_dyt/data/dayuan.netccfg),  we will set ["dayuan.nod.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.nod.xml),  ["dayuan.edg.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.edg.xml), ["dayuan.typ.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.typ.xml), ["dayuan.con.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.con.xml) all 4 above files as input files. And then set a out put file, which is our network file ["dayuan.net.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.net.xml).
+
+As shown in SUMO project files structure:
+<img src="./imgs/structure.gif"/>
+
 
 
 ----
