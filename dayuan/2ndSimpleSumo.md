@@ -66,7 +66,7 @@ For example, the first row `<connection from="L2" to="L12" fromLane="0" toLane="
 
 ## Step 4: Network generation
 
-All 4 files above will be used to generate the network file ["dayuan.net.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.net.xml) using `netconvert` command. 
+All 4 files above will be used to generate the network file ["dayuan.net.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.net.xml) using [`netconvert` command](https://sumo.dlr.de/docs/NETCONVERT.html). 
 
 Before that, let set up all parameters into 1 file ["dayuan.netccfg"](../docs/tutorial/quickstart_dyt/data/dayuan.netccfg) since there are too much parameters. 
 
@@ -79,39 +79,66 @@ BTW, If u-turn movements are not allowed, the command `<no-turnarounds value="tr
 
 Run `netconvert -c dayuan.netccfg` to generate file ["dayuan.net.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.net.xml).
 
+```
+$ netconvert -c dayuan.netccfg
+Loading configuration... done.
+Parsing nodes from 'dayuan.cross.nod.xml'... done.
+Parsing edges from 'dayuan.cross.edg.xml'...
+*
+*
+*
+Computing ***
+Building inner edges... done (0ms).
+-----------------------------------------------------
+Summary:
+ Node type statistics:
+  Unregulated junctions       : 0
+  Priority junctions          : 9
+  Right-before-left junctions : 0
+ Network boundaries:
+  Original boundary  : *,*......
+  Applied offset     : *,*......
+  Converted boundary : *,*......
+-----------------------------------------------------
+Writing network... done (3ms).
+Success.
+```
+
 ## Step 4: Traffic demand
 
 Then I set up traffic flow information into ["dayuan.rou.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.rou.xml).
+
+
 
 **Firstly** I define 4 types of cars. BTW the sigma parameter means all drivers are 50% perfect in driving.
 
 Vehicle type related attributes include:
 
-- (a) **id**: ID of the vehicle type, defined by users with numbers, word strings or both;
-- (b) **accel**: maximum acceleration of the respective vehicle type (in m/s2);
-- (c) **decal**: maximum deceleration of the respective vehicle type (in m/s2);
-- (d) **sigma**: drivers’ imperfection in driving (between 0 and 1);
-- (e) **length**: vehicle length (in meters);
-- (f) **maxSpeed**: maximum vehicular velocity (in m/s);
-- (g) **color**: color of the vehicle type. It is defined with 3 numbers (between 0 and 1) for red, green and blue respectively. Values are separated by comma and in quotes with no space between the values. For example, 1,0,0 represents the red color, 0,1,0 represents green color and 0,0,1 represents blue color.
+- (a) ***id***: ID of the vehicle type, defined by users with numbers, word strings or both;
+- (b) ***accel***: maximum acceleration of the respective vehicle type (in m/s2);
+- (c) ***decal***: maximum deceleration of the respective vehicle type (in m/s2);
+- (d) ***sigma***: drivers’ imperfection in driving (between 0 and 1);
+- (e) ***length***: vehicle length (in meters);
+- (f) ***maxSpeed***: maximum vehicular velocity (in m/s);
+- (g) ***color***: color of the vehicle type. It is defined with 3 numbers (between 0 and 1) for red, green and blue respectively. Values are separated by comma and in quotes with no space between the values. For example, 1,0,0 represents the red color, 0,1,0 represents green color and 0,0,1 represents blue color.
 - The sequence of the attributes can be changed. The attribute sigma is assigned as 0.5 for all vehicle types.
 
 **Secondly** 12 routes are assigned to let each vehicle to select from.
 
 Following the vehicle type information traffic route data need to be defined as well. The input attributes include:
 
-- (a) **id**: ID of a certain route and defined by users with numbers, word strings or both.
-- (b) **edges**: The sequence of the names of the links, composing the defined route.
+- (a) ***id***: ID of a certain route and defined by users with numbers, word strings or both.
+- (b) ***edges***: The sequence of the names of the links, composing the defined route.
 
 
 **Thirdly** it's the traffic flow (traffic demand) design.
 
 Traffic demand data are defined with four attributes:
 
-- (a) **depart**: departure time of a certain vehicle.
-- (b) **id**: ID of a certain vehicle and defined by users with numbers, word strings or both.
-- (c) **route**: the route used by the defined vehicle;
-- (d) **type**: ID of the defined vehicle type.
+- (a) ***depart***: departure time of a certain vehicle.
+- (b) ***id***: ID of a certain vehicle and defined by users with numbers, word strings or both.
+- (c) ***route***: the route used by the defined vehicle;
+- (d) ***type***: ID of the defined vehicle type.
 
 ## Step 5: Run
 
