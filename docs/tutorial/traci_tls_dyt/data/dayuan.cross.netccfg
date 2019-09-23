@@ -6,13 +6,13 @@
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/netconvertConfiguration.xsd">
 
     <input>
-        <node-files value="cross.nod.xml"/>
-        <edge-files value="cross.edg.xml"/>
-        <connection-files value="cross.con.xml"/>
+        <node-files value="dayuan.cross.nod.xml"/>
+        <edge-files value="dayuan.cross.edg.xml"/>
+        <connection-files value="dayuan.cross.con.xml"/>
     </input>
 
     <output>
-        <output-file value="cross.net.xml"/>
+        <output-file value="dayuan.cross.net.xml"/>
     </output>
 
     <report>
