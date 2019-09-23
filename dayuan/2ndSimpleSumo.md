@@ -20,7 +20,7 @@ All nodes are set up in ["dayuan.nod.xml"](../docs/tutorial/quickstart_dyt/data/
 
 The definitions of the attributes in the node file are listed below.
 
-- (a) **id**: the ID name of the node, defined by users with numbers, word strings or both.
+- (a) ***id***: the ID name of the node, defined by users with numbers, word strings or both.
 - (b) **x**: the x-coordinate location of the defined node (in meters)
 - (c) **y**: the y-coordinate location of the defined node (in meters)
 - (d) **type**: the signal control type of the defined node. It is an optional attribute and defined with priority and traffic_light for unsignalized and signalized intersections respectively.
