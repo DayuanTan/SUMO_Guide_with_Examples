@@ -70,7 +70,7 @@ As shown in SUMO project files structure:
 
 BTW, If u-turn movements are not allowed, the command `<no-turnarounds value="true"/>` should be added to the configuration file. As stated previously, the prohibition of u-turn movements can only be conducted globally.
 
-Run `netconvert -c dayuan.cross.netccfg` to generate file ["dayuan.cross.net.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.cross.net.xml).
+Run `netconvert -c dayuan.cross.netccfg` to generate file ["dayuan.cross.net.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.net.xml).
 
 ```
 $ netconvert -c dayuan.cross.netccfg
@@ -123,7 +123,7 @@ Success.
 
 ## Step 5: Traffic demand (randomTrips.py)
 
-I 2nd example I set up traffic flow information into ["dayuan.rou.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.rou.xml) by hand. **Firstly** I define 4 types of cars. 
+In 2nd example I set up traffic flow information into ["dayuan.rou.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.rou.xml) by hand. **Firstly** I define 4 types of cars. 
 **Secondly** 12 routes are assigned to let each vehicle to select from.
 **Thirdly** it's the traffic flow (traffic demand)/route design.
 
@@ -140,9 +140,11 @@ A ***route*** is an expanded trip, that means, that a route definition contains 
 There are several methods to generate routes for SUMO. DUAROUTER is one of them.
 [DUAROUTER (dynamic user assignment (DUA) router)](https://sumo.dlr.de/docs/DUAROUTER.html) is used to turn your trips into routes. Another popular way is using Randomization `Tools/Trip#randomTrips.py`, which is a quick way to get some traffic if you do not have access to any measurements but the results are highly unrealistic. See [Tools/Trip#randomTrips.py](https://sumo.dlr.de/docs/Tools/Trip.html#randomtripspy).
 
+In the official example, it use [`python runner.py`](../docs/tutorial/traci_tls/) to generate the route and run the example.
+
 ## Step 6: Run
 
-Then I set up some configurations for running into file ["dayuan.sumocfg"](../docs/tutorial/quickstart_dyt/data/dayuan.sumocfg), includeing net-file ["dayuan.net.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.net.xml), route-files ["dayuan.rou.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.rou.xml) and gui-settings-file ["dayuan.settings.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.settings.xml).
+Then I set up some configurations for running into file ["dayuan.cross.sumocfg"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.sumocfg), includeing net-file ["dayuan.cross.net.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.net.xml), route-files ["dayuan.cross.rou.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.rou.xml) and gui-settings-file ["dayuan.cross.settings.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.settings.xml).
 
 
 After having all above, we can run the simulation using this command `sumo-gui -c dayuan.sumocfg`. 
