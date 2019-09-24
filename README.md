@@ -55,3 +55,8 @@ Few screenshots about it:
 Few screenshots about it:
 
 <img src="./dayuan/imgs/2nd/r1.png" width=250/> <img src="./dayuan/imgs/2nd/r2.png" width=250/> <img src="./dayuan/imgs/2nd/r3.png" width=250/>
+
+# [Third SUMO example: use TraCI](./dayuan/3rdSumoTraCI.md)
+
+This is an example using TraCI to control and change traffic lights.
+
