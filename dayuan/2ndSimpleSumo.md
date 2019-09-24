@@ -64,9 +64,9 @@ For example, the first row `<connection from="L2" to="L12" fromLane="0" toLane="
 <img src="./imgs/2nd/2.png">
 <img src="./imgs/2nd/3.png">
 
-## Step 4: Network generation
+## Step 4: Network generation (netconvert)
 
-All 4 files above will be used to generate the network file ["dayuan.net.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.net.xml) using [`netconvert` command](https://sumo.dlr.de/docs/NETCONVERT.html). 
+All 4 files above will be used to generate the network file ["dayuan.net.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.net.xml) using [`netconvert` command](https://sumo.dlr.de/docs/NETCONVERT.html) (see [more](https://sumo.dlr.de/docs/Networks/Import.html) about using `netconvert` to convert other third-party formats to network file "*.net.xml"). 
 
 Before that, let set up all parameters into 1 file ["dayuan.netccfg"](../docs/tutorial/quickstart_dyt/data/dayuan.netccfg) since there are too much parameters. 
 
@@ -104,7 +104,7 @@ Writing network... done (3ms).
 Success.
 ```
 
-## Step 4: Traffic demand
+## Step 5: Traffic demand
 
 Then I set up traffic flow information into ["dayuan.rou.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.rou.xml).
 
@@ -140,9 +140,11 @@ Traffic demand data are defined with four attributes:
 - (c) ***route***: the route used by the defined vehicle;
 - (d) ***type***: ID of the defined vehicle type.
 
-## Step 5: Run
+## Step 6: Run
 
-All having all above, we can run the simulation using this command `sumo-gui -c dayuan.sumocfg`. 
+Then I set up some configurations for running into file ["dayuan.sumocfg"](../docs/tutorial/quickstart_dyt/data/dayuan.sumocfg), includeing net-file ["dayuan.net.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.net.xml), route-files ["dayuan.rou.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.rou.xml) and gui-settings-file ["dayuan.settings.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.settings.xml).
+
+After having all above, we can run the simulation using this command `sumo-gui -c dayuan.sumocfg`. 
 <img src="./imgs/2nd/4.gif" />
 
 ## Result
