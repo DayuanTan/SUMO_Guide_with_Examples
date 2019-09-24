@@ -155,13 +155,118 @@ calling  /usr/local/opt/sumo/share/sumo/bin/duarouter -n dayuan.cross.net.xml -r
 Success.
 ```
 
-*In the official example, it use [`python runner.py`](../docs/tutorial/traci_tls/) to generate the route and run the example. Even though the official website says "The route data is generated randomly by the script" but it doesn't mean it generated the route randomly, it just random write some lines into the rou.xml file. Check "generate_routefile()" in [runner.py]((../docs/tutorial/traci_tls/)).*
+*In the official example, it use [`python runner.py`](../docs/tutorial/traci_tls/) to generate the route and run the example. Even though the official website says "The route data is generated randomly by the script" but it doesn't mean it generated the route randomly, it just random write some lines into the rou.xml file. Check "generate_routefile()" in [runner.py](../docs/tutorial/traci_tls/).*
 
-## Step 6: Induction Loops Detectors
+## Step 6: Induction Loops (感应线圈) Detectors
 
+Here are some introduction to Inductino Detectors: 
 
-## Analyze runner.py
+- [Induction Loops Detectors (E1)](https://sumo.dlr.de/docs/Simulation/Output/Induction_Loops_Detectors_(E1).html). There is also an [E2 detector](https://sumo.dlr.de/docs/Simulation/Output/Lanearea_Detectors_(E2).html) and [E3](https://sumo.dlr.de/docs/TraCI/Multi-Entry-Exit_Detectors_Value_Retrieval.html). 
 
+- [TraCI/Induction Loop Value Retrieval](https://sumo.dlr.de/docs/TraCI/Induction_Loop_Value_Retrieval.html)
+
+*BUT in the official example, it uses a [det.xml file](../docs/tutorial/traci_tls/data/cross.det.xml). Then use*
+```python
+if traci.inductionloop.getLastStepVehicleNumber("0") > 0:
+    # a vehicle is detected
+    # there is a vehicle from the north, switch
+    ...do something...
+
+#getLastStepVehicleNumber(self, loopID)
+    getLastStepVehicleNumber(string) -> integer
+ 
+    #Returns the number of vehicles that were on the named induction loop within the last simulation step.
+```
+*in python file to read it. [(develop doc)](https://sumo.dlr.de/pydoc/traci._inductionloop.html)*
+
+## Analyze [runner.py](../docs/tutorial/traci_tls/), [TraCI/Interfacing TraCI from Python](https://sumo.dlr.de/docs/TraCI/Interfacing_TraCI_from_Python.html)
+
+### a) Import SUMO/tools 
+
+This is standard and same for almost all cases. Just copy:
+```python
+# we need to import python modules from the $SUMO_HOME/tools directory
+if 'SUMO_HOME' in os.environ:
+    tools = os.path.join(os.environ['SUMO_HOME'], 'tools')
+    sys.path.append(tools)
+else:
+    sys.exit("please declare environment variable 'SUMO_HOME'")
+```
+### b) Start SUMO as a server, connect and run 
+
+```python
+    options = get_options()
+
+    # this script has been called from the command line. It will start sumo as a
+    # server, then connect and run
+    if options.nogui:
+        sumoBinary = checkBinary('sumo')
+    else:
+        sumoBinary = checkBinary('sumo-gui')
+```
+
+### c) Run TraCI
+```python
+    import traci  # noqa
+
+    # this is the normal way of using traci. sumo is started as a
+    # subprocess and then the python script connects and runs
+    traci.start([sumoBinary, "-c", "data/cross.sumocfg",
+                             "--tripinfo-output", "tripinfo.xml"])
+    # use TraCI to do something
+    step = 0
+    while step < 1000:
+        traci.simulationStep()
+        if traci.inductionloop.getLastStepVehicleNumber("0") > 0:
+            traci.trafficlight.setRedYellowGreenState("0", "GrGr")
+        step += 1
+
+    traci.close()
+```
+In [runner.py](../docs/tutorial/traci_tls/) it created a fucntion `run()` to use TraCI to do its stuff. 
+
+### d) Run a simulation until all vehicles have arrived: ([develop doc](https://sumo.dlr.de/pydoc/traci._simulation.html))
+```python
+  while traci.simulation.getMinExpectedNumber() > 0:
+      traci.simulationStep()
+
+#getMinExpectedNumber(self)
+    getMinExpectedNumber() -> integer
+ 
+    #Returns the number of vehicles which are in the net plus the
+    #ones still waiting to start. This number may be smaller than
+    #the actual number of vehicles still to come because of delayed
+    #route file parsing. If the number is 0 however, it is
+    #guaranteed that all route files have been parsed completely
+    #and all vehicles have left the network.
+```
+
+In TraCI, we can use `Subscriptions` or `Context Subscriptions` to retrieve the values of interest or a list of variables automatically for every simulation step. See [TraCI/Interfacing TraCI from Python](https://sumo.dlr.de/docs/TraCI/Interfacing_TraCI_from_Python.html) for more info.  
+
+### e) change traffic lights ([develop doc](https://sumo.dlr.de/pydoc/traci._trafficlight.html))
+
+```python
+#getPhase(self, tlsID)
+    getPhase(string) -> integer
+ 
+    #Returns the index of the current phase within the list of all phases of
+    #the current program.
+
+#setPhase(self, tlsID, index)
+    setPhase(string, integer) -> None
+ 
+    #Switches to the phase with the given index in the list of all phases for
+    #the current program.
+
+#setRedYellowGreenState(self, tlsID, state)
+    setRedYellowGreenState(string, string) -> None
+ 
+    #Sets the named tl's state as a tuple of light definitions from
+    #rugGyYuoO, for red, red-yellow, green, yellow, off, where lower case letters mean that the stream has
+    #to decelerate.
+```
+
+All develop doc [here](https://sumo.dlr.de/pydoc/).
 
 
 ## Step 7: Run
