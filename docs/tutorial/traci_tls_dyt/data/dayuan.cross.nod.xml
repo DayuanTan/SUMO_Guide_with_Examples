@@ -2,13 +2,13 @@
 <nodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
    <node id="0" x="0.0" y="0.0"  type="traffic_light"/>
 
-   <node id="1" x="-50.0" y="0.0" type="priority"/>
-   <node id="2" x="+50.0" y="0.0" type="priority"/>
-   <node id="3" x="0.0" y="-50.0" type="priority"/>
-   <node id="4" x="0.0" y="+50.0" type="priority"/>
+   <node id="1" x="-300.0" y="0.0" type="priority"/>
+   <node id="2" x="+300.0" y="0.0" type="priority"/>
+   <node id="3" x="0.0" y="-100.0" type="priority"/>
+   <node id="4" x="0.0" y="+100.0" type="priority"/>
    
-   <node id="51" x="-51.0" y="0.0" type="priority"/>
-   <node id="52" x="+51.0" y="0.0" type="priority"/>
-   <node id="53" x="0.0" y="-50.0" type="priority"/>
-   <node id="54" x="0.0" y="+51.0" type="priority"/>  
+   <node id="51" x="-301.0" y="0.0" type="priority"/>
+   <node id="52" x="+301.0" y="0.0" type="priority"/>
+   <node id="53" x="0.0" y="-101.0" type="priority"/>
+   <node id="54" x="0.0" y="+101.0" type="priority"/>  
 </nodes>

@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on Wed Aug 14 16:54:20 2019 by Eclipse SUMO GUI Version 1.2.0
+<!-- generated on Tue Sep 24 00:21:44 2019 by Eclipse SUMO GUI Version 1.2.0
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <net-file value="cross.net.xml"/>
-        <route-files value="cross.rou.xml"/>
-        <additional-files value="cross.det.xml"/>
+        <net-file value="dayuan.cross.net.xml"/>
+        <route-files value="dayuan.cross.rou.xml"/>
+        <additional-files value="dayuan.cross.det.xml"/>
     </input>
 
     <time>
@@ -18,16 +18,12 @@
         <no-step-log value="true"/>
     </report>
 
+    <gui_only>
+        <gui-settings-file value="dayuan.cross.settings.xml"/>
+    </gui_only>
+
 </configuration>
 -->
 
 <detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e1_file.xsd">
-    <interval begin="0.00" end="30.00" id="0" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
-    <interval begin="30.00" end="60.00" id="0" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
-    <interval begin="60.00" end="90.00" id="0" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
-    <interval begin="90.00" end="120.00" id="0" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
-    <interval begin="120.00" end="150.00" id="0" nVehContrib="2" flow="240.00" occupancy="2.86" speed="16.40" harmonicMeanSpeed="16.32" length="7.00" nVehEntered="2"/>
-    <interval begin="150.00" end="180.00" id="0" nVehContrib="1" flow="120.00" occupancy="1.46" speed="15.97" harmonicMeanSpeed="15.97" length="7.00" nVehEntered="1"/>
-    <interval begin="180.00" end="210.00" id="0" nVehContrib="0" flow="0.00" occupancy="0.00" speed="-1.00" harmonicMeanSpeed="-1.00" length="-1.00" nVehEntered="0"/>
-    <interval begin="210.00" end="215.00" id="0" nVehContrib="1" flow="720.00" occupancy="8.11" speed="17.26" harmonicMeanSpeed="17.26" length="7.00" nVehEntered="1"/>
 </detector>

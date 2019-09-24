@@ -5,7 +5,7 @@ This is a SUMO example using [**TraCI**](https://sumo.dlr.de/docs/TraCI.html).
 
 I want to implement this road network:
 
-<img src="./imgs/2nd/2ndSimpleSumoRoadNet.png" />
+<img src="./imgs/3/1.png" />
 
 ## Example description
 Our example plays on a simple signalized intersection with four approaches. We only have traffic on the horizontal axis and important vehicles (like trams, trains, fire engines, ...) on the vertical axis from north to south. On the approach in the north we have an induction loop to recognize entering vehicles. While no vehicle enters from the north we give green on the horizontal axis all the time but when a vehicle enters the induction loop we switch the signal immediately so the vehicle can cross the intersection without a stop. [1]
@@ -46,7 +46,9 @@ The defined attributes include:
 Each edges are connected with others. The connection between edges are set up in in ["dayuan.cross.con.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.con.xml) file.
 
 ```
-NOTE: If each edge has more than 2 lanes, they can not connect to each other freely. The connection between each lanes are set up in "dayuan.cross.con.xml" file using "fromLane/toLane" attributes, see more on 2nd example.
+NOTE: If each edge has more than 2 lanes, they can not connect to each other freely. 
+The connection between each lanes are set up in "dayuan.cross.con.xml" file 
+using "fromLane/toLane" attributes, see more on 2nd example.
 ```
 
 The meaning of each attribute is as following:
@@ -72,14 +74,11 @@ BTW, If u-turn movements are not allowed, the command `<no-turnarounds value="tr
 
 Run `netconvert -c dayuan.cross.netccfg` to generate file ["dayuan.cross.net.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.net.xml).
 
-```
+```python
 $ netconvert -c dayuan.cross.netccfg
 Loading configuration... done.
 Parsing nodes from 'dayuan.cross.nod.xml'... done.
-Parsing edges from 'dayuan.cross.edg.xml'...
-Warning: Edge's '53i' from- and to-node are at the same position.
-Warning: Edge's '53o' from- and to-node are at the same position.
-done.
+Parsing edges from 'dayuan.cross.edg.xml'... done.
 Parsing connections from 'dayuan.cross.con.xml'... done.
  Import done:
    9 nodes loaded.
@@ -102,8 +101,8 @@ Dividing of lanes on approached lanes... done (0ms).
 Processing turnarounds... done (0ms).
 Rechecking of lane endings... done (0ms).
 Computing traffic light control information... done (0ms).
-Computing node logics... done (0ms).
-Computing traffic light logics... done (1ms).
+Computing node logics... done (1ms).
+Computing traffic light logics... done (0ms).
  1 traffic light(s) computed.
 Building inner edges... done (0ms).
 -----------------------------------------------------
@@ -113,11 +112,11 @@ Summary:
   Priority junctions          : 9
   Right-before-left junctions : 0
  Network boundaries:
-  Original boundary  : -51.00,-50.00,51.00,51.00
-  Applied offset     : 51.00,50.00
-  Converted boundary : 0.00,0.00,102.00,101.00
+  Original boundary  : -301.00,-101.00,301.00,101.00
+  Applied offset     : 301.00,101.00
+  Converted boundary : 0.00,0.00,602.00,202.00
 -----------------------------------------------------
-Writing network... done (3ms).
+Writing network... done (2ms).
 Success.
 ```
 
@@ -129,7 +128,7 @@ In 2nd example I set up traffic flow information into ["dayuan.rou.xml"](../docs
 
 ## 5.1 Generate a route: 
 
-BUT here, I want to ***generate randomly a route*** instead of doing to by hand.
+BUT here, I want to ***generate randomly a route*** using python script.
 
 [Traffic Demand](https://sumo.dlr.de/docs/Demand/Introduction_to_demand_modelling_in_SUMO.html) is the word we use to descripte how many vehicles we will have, types of vehicles, the route of each vehicles.
 
@@ -140,31 +139,42 @@ A ***route*** is an expanded trip, that means, that a route definition contains 
 There are several methods to generate routes for SUMO. DUAROUTER is one of them.
 [DUAROUTER (dynamic user assignment (DUA) router)](https://sumo.dlr.de/docs/DUAROUTER.html) is used to turn your trips into routes. Another popular way is using Randomization `Tools/Trip#randomTrips.py`, which is a quick way to get some traffic if you do not have access to any measurements but the results are highly unrealistic. See [Tools/Trip#randomTrips.py](https://sumo.dlr.de/docs/Tools/Trip.html#randomtripspy).
 
-In the official example, it use [`python runner.py`](../docs/tutorial/traci_tls/) to generate the route and run the example.
+To use "Tools/Trip#randomTrips.py", a possible way is run a command like this:
+`$ ../../../../tools/randomTrips.py -n dayuan.cross.net.xml -o dayuan.trips.trips.xml --fringe-factor 100 -p 1 --route-file dayuan.cross.rou.xml --vehicle-class bus`
+
+- ***../../../../tools/randomTrips.py***: Find the correct path of randomTrips.py file.
+- ***-n dayuan.cross.net.xml***: As input file. Usually it's a network file.
+- ***-o dayuan.trips.trips.xml***: As output file. `randomTrips.py` generates a trip file. Not route file by default.
+- ***--route-file dayuan.cross.rou.xml***: Add "--route-file" attribute it will call DUAROUTER automatically backend and generate route file for us. 
+- ***--fringe-factor 100***: The option --fringe-factor <FLOAT> increases the probability that trips will start/end at the fringe of the network. If the value 10 is given, edges that have no successor or no predecessor will be 10 times more likely to be chosen as start- or endpoint of a trip. This is useful when modelling through-traffic which starts and ends at the outside of the simulated area.
+- ***-p 1***: The arrival rate is controlled by option --period/-p <FLOAT> (default 1). By default this generates vehicles with a constant period and arrival rate of (1/period) per second. By using values below 1, multiple arrivals per second can be achieved.
+
+```python
+$ ../../../../tools/randomTrips.py -n dayuan.cross.net.xml -o dayuan.trips.trips.xml --fringe-factor 100 -p 1 --route-file dayuan.cross.rou.xml --vehicle-class bus
+calling  /usr/local/opt/sumo/share/sumo/bin/duarouter -n dayuan.cross.net.xml -r dayuan.trips.trips.xml -o dayuan.cross.rou.xml --ignore-errors --begin 0 --end 3600 --no-step-log --no-warnings
+Success.
+```
+
+*In the official example, it use [`python runner.py`](../docs/tutorial/traci_tls/) to generate the route and run the example. Even though the official website says "The route data is generated randomly by the script" but it doesn't mean it generated the route randomly, it just random write some lines into the rou.xml file. Check "generate_routefile()" in [runner.py]((../docs/tutorial/traci_tls/)).*
 
 ## Step 6: Run
 
 Then I set up some configurations for running into file ["dayuan.cross.sumocfg"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.sumocfg), includeing net-file ["dayuan.cross.net.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.net.xml), route-files ["dayuan.cross.rou.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.rou.xml) and gui-settings-file ["dayuan.cross.settings.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.settings.xml).
 
 
-After having all above, we can run the simulation using this command `sumo-gui -c dayuan.sumocfg`. 
+After having all above, we can run the simulation using this command `sumo-gui -c dayuan.cross.sumocfg`. 
+
+*In the official example, it use [`python runner.py`](../docs/tutorial/traci_tls/) to generate the route and run the example.*
+
+
 <img src="./imgs/2nd/4.gif" />
+
+
 
 ## Result
 
-Few screenshots of runing the simulation:
-<img src="./imgs/2nd/r1.png"/>
-<img src="./imgs/2nd/r2.png">
-<img src="./imgs/2nd/r3.png">
+The results of using command `sumo-gui -c dayuan.cross.sumocfg` in [my 3rd example](../docs/tutorial/traci_tls_dyt/data/) and using `python runner.py` in [official example](../docs/tutorial/traci_tls/) are kind of different. The reason is that I cannot generate as good as route file rou.xml as using `python runner.py`, which is neater and more efficient. 
 
-FYI, in ["dayuan.settings.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.settings.xml) I set the run time from 54000 to 54100. You can change it as you want.
-
-```
-    <time>
-        <begin value="54000"/>
-        <end value="54100"/>
-    </time>
-```
 
 ----
 Reference:

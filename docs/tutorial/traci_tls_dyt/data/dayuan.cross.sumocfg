@@ -3,14 +3,18 @@
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <net-file value="cross.net.xml"/>
-        <route-files value="cross.rou.xml"/>
-        <additional-files value="cross.det.xml"/>
+        <net-file value="dayuan.cross.net.xml"/>
+        <route-files value="dayuan.cross.rou.xml"/>
+        <additional-files value="dayuan.cross.det.xml"/>
     </input>
 
     <time>
         <begin value="0"/>
     </time>
+
+    <gui_only>
+        <gui-settings-file value="dayuan.cross.settings.xml"/>
+    </gui_only>
 
     <report>
         <verbose value="true"/>

@@ -79,7 +79,7 @@ BTW, If u-turn movements are not allowed, the command `<no-turnarounds value="tr
 
 Run `netconvert -c dayuan.netccfg` to generate file ["dayuan.net.xml"](../docs/tutorial/quickstart_dyt/data/dayuan.net.xml).
 
-```
+```python
 $ netconvert -c dayuan.netccfg
 Loading configuration... done.
 Parsing nodes from 'dayuan.cross.nod.xml'... done.
