@@ -157,7 +157,14 @@ Success.
 
 *In the official example, it use [`python runner.py`](../docs/tutorial/traci_tls/) to generate the route and run the example. Even though the official website says "The route data is generated randomly by the script" but it doesn't mean it generated the route randomly, it just random write some lines into the rou.xml file. Check "generate_routefile()" in [runner.py]((../docs/tutorial/traci_tls/)).*
 
-## Step 6: Run
+## Step 6: Induction Loops Detectors
+
+
+## Analyze runner.py
+
+
+
+## Step 7: Run
 
 Then I set up some configurations for running into file ["dayuan.cross.sumocfg"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.sumocfg), includeing net-file ["dayuan.cross.net.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.net.xml), route-files ["dayuan.cross.rou.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.rou.xml) and gui-settings-file ["dayuan.cross.settings.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.settings.xml).
 
