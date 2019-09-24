@@ -266,8 +266,17 @@ In TraCI, we can use `Subscriptions` or `Context Subscriptions` to retrieve the 
     #to decelerate.
 ```
 
-All develop doc [here](https://sumo.dlr.de/pydoc/).
+All develop doc [here](https://sumo.dlr.de/pydoc/). 
 
+Alos [Simulation/Traffic Lights](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html) descirbe the basic idea of traffic lights:
+
+- `generateTLSE2Detectors.py generates a file which includes areal detectors. All lanes incoming into an intersection are covered with these detectors.`
+
+- `generateTLSE3Detectors.py generates a file which includes multi-entry/multi-exit detectors. Detectors are built for each edge incoming to the traffic light. All lanes of each of these edges are covered with exit points.`
+
+- [Controlling traffic lights via TraCI](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html#controlling_traffic_lights_via_traci).
+
+- Tutorials for controlling traffic lights in this way can be found at [Tutorials#TraCI_Tutorials](https://sumo.dlr.de/docs/Tutorials.html#traci_tutorials).
 
 ## Step 7: Run
 
