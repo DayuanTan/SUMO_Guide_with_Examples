@@ -62,7 +62,7 @@ The created polygon file "district-of-columbia.poly.xml" can then be added to a 
 
  ## 4. trips & routes
 
- `python3.7.3 ../../tools/randomTrips.py -n district-of-columbia.net.xml -r district-of-columbia.rou.xml --period 0.1`
+ `python3.7.3 ../../tools/randomTrips.py -n district-of-columbia.net.xml -r district-of-columbia.rou.xml --fringe-factor 100 --end 1800 --period 0.5`
 
 - ../../../tools/randomTrips.py: Find the correct path of randomTrips.py file.
 - -n *.net.xml: As input file. Usually it's a network file.
@@ -72,8 +72,8 @@ The created polygon file "district-of-columbia.poly.xml" can then be added to a 
 - -p 1: The arrival rate is controlled by option --period/-p (default 1). By default this generates vehicles with a constant period and arrival rate of (1/period) per second. By using values below 1, multiple arrivals per second can be achieved.
 
  ```shell
-$ python ../../tools/randomTrips.py -n district-of-columbia.net.xml -r district-of-columbia.rou.xml --period 1
-calling  /usr/local/opt/sumo/share/sumo/bin/duarouter -n district-of-columbia.net.xml -r trips.trips.xml -o district-of-columbia.rou.xml --ignore-errors --begin 0 --end 3600 --no-step-log --no-warnings
+ $ python ../../tools/randomTrips.py -n district-of-columbia.net.xml -r district-of-columbia.rou.xml --fringe-factor 100 --end 1800 --period 0.5
+calling  /usr/local/opt/sumo/share/sumo/bin/duarouter -n district-of-columbia.net.xml -r trips.trips.xml -o district-of-columbia.rou.xml --ignore-errors --begin 0 --end 1800.0 --no-step-log --no-warnings
 Success.
  ```
 
