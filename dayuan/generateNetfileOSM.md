@@ -64,21 +64,20 @@ The created polygon file "district-of-columbia.poly.xml" can then be added to a 
 
  `python3.7.3 ../../tools/randomTrips.py -n district-of-columbia.net.xml -r district-of-columbia.rou.xml --period 1`
 
+- ../../../tools/randomTrips.py: Find the correct path of randomTrips.py file.
+- -n *.net.xml: As input file. Usually it's a network file.
+- //-o trips.trips.xml: As output file. randomTrips.py generates a trip file. Not route file by default.
+- //--route-file dayuan.cross.rou.xml: Add "--route-file" attribute it will call DUAROUTER automatically backend and generate route file for us.
+- --fringe-factor 100: The option --fringe-factor increases the probability that trips will start/end at the fringe of the network. If the value 10 is given, edges that have no successor or no predecessor will be 10 times more likely to be chosen as start- or endpoint of a trip. This is useful when modelling through-traffic which starts and ends at the outside of the simulated area.
+- -p 1: The arrival rate is controlled by option --period/-p (default 1). By default this generates vehicles with a constant period and arrival rate of (1/period) per second. By using values below 1, multiple arrivals per second can be achieved.
+
  ```shell
 $ python ../../tools/randomTrips.py -n district-of-columbia.net.xml -r district-of-columbia.rou.xml --period 1
 calling  /usr/local/opt/sumo/share/sumo/bin/duarouter -n district-of-columbia.net.xml -r trips.trips.xml -o district-of-columbia.rou.xml --ignore-errors --begin 0 --end 3600 --no-step-log --no-warnings
 Success.
  ```
 
+`--> 257K Sep 27 07:10 trips.trips.xml`
 `--> 5.0M Sep 27 07:11 district-of-columbia.rou.alt.xml`
 `--> 4.6M Sep 27 07:11 district-of-columbia.rou.xml`
 
-`duarouter --net=district-of-columbia.net.xml -r district-of-columbia.rou.xml --output-file=dua.rou.xml --xml-validation never`
-
-```shell
-$ duarouter --net=district-of-columbia.net.xml -r district-of-columbia.rou.xml --output-file=dua.rou.xml --xml-validation never
-Success.up to time step: 3600.00
-```
-
-`--> 5.0M Sep 27 07:17 dua.rou.alt.xml`
-`--> 4.6M Sep 27 07:17 dua.rou.xml`
