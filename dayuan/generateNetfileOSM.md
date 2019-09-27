@@ -62,7 +62,7 @@ The created polygon file "district-of-columbia.poly.xml" can then be added to a 
 
  ## 4. trips & routes
 
- `python3.7.3 ../../tools/randomTrips.py -n district-of-columbia.net.xml -r district-of-columbia.rou.xml --period 0.1`
+ `python3.7.3 ../../tools/randomTrips.py -n district-of-columbia.net.xml -r district-of-columbia.rou.xml --fringe-factor 100 --period 0.1`
 
 - ../../../tools/randomTrips.py: Find the correct path of randomTrips.py file.
 - -n *.net.xml: As input file. Usually it's a network file.
