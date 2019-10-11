@@ -1,0 +1,27 @@
+<configuration>
+
+    <input>
+        <net-file value="dcDowntown.net.xml"/>
+        <route-files value="dcDowntown.rou.xml"/>
+        <additional-files value="dcDowntown.poly.xml"/>
+    </input>
+
+    <output>
+        <summary-output value="dayuan.summary.xml"/>
+    </output>
+      
+    <time>
+        <begin value="0"/>
+        <end value="1000"/>
+        
+    </time>
+
+    <gui_only>
+        <gui-settings-file value="dayuan.settings.xml"/>
+    </gui_only>
+
+    <report>
+	<duration-log.statistics value="true"/>
+    </report>
+
+</configuration>
