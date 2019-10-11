@@ -1,7 +1,7 @@
 # Generate urban net file using OpenStreetMap
 
 ## 1. Download OSM file from OSM website.
-I followed this page. Go to the OSM website, click "export". Select "geofabrik". Find the city you want. I choose [DC area](https://download.geofabrik.de/north-america/us/district-of-columbia.html).
+I followed this page. Go to the [OSM website](https://planet.openstreetmap.org), click "export". Select "geofabrik". Find the city you want. I choose [DC area](https://download.geofabrik.de/north-america/us/district-of-columbia.html).
 
 There are multiple formats. I choose this format:
 
