@@ -62,3 +62,6 @@ This is an example using TraCI to control and change traffic lights.
 
 # [Generate urban net file using OpenStreetMap](./dayuan/generateNetfileOSM.md)
 
+# [Generate smaller net file using OpenStreetMap (DC downtown)](./dayuan/generate2_DCdowntown.md)
+
+
