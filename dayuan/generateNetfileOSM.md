@@ -26,18 +26,18 @@ netconvert --type-files ../../data/typemap/osmNetconvert.typ.xml,../../data/type
 `--> 221M Sep 27 06:43 district-of-columbia.net.xml`
 
 Rationale:
-- There are multiple degrees of freedom when importing data from OSM. SUMO provides recommended typemaps in the folder <SUMO_HOME>/data/typemap/. They are explained below.
-- osmNetconvert.typ.xml: default settings. appropriate for rural and motorway scenarios. This is used in the absence of user-specified types. All other typemaps are intended as patches to this typemap
-- osmNetconvertUrbanDe.typ.xml: Changes default speeds to reflect typical urban speed limits (50km/h)
-- --geometry.remove: Simplifies the network (saving space) without changing topology
-- --roundabouts.guess: This sets the appropriate right-of-way rules at roundabouts. (Explicit right-of-way rules are not imported from OSM). If this option is not used and roundabouts are not defined manually, then traffic jams will likely occur at roundabouts
-- --ramps.guess. Acceleration/Deceleration lanes are often not included in OSM data. This option identifies likely roads that have these additional lanes and causes them to be added
-- --junctions.join. See #Junctions
-- --tls.guess-signals, --tls.discard-simple, --tls.join. See #Traffic_Lights
+- There are multiple degrees of freedom when importing data from OSM. SUMO provides recommended **typemaps in the folder <SUMO_HOME>/data/typemap/**. They are explained below.
+- ***osmNetconvert.typ.xml***: default settings. appropriate for rural and motorway scenarios. This is used in the absence of user-specified types. All other typemaps are intended as patches to this typemap
+- ***osmNetconvertUrbanDe.typ.xml***: Changes default speeds to reflect typical urban speed limits (50km/h)
+- **--geometry.remove**: Simplifies the network (saving space) without changing topology
+- **--roundabouts.guess**: This sets the appropriate right-of-way rules at roundabouts. (Explicit right-of-way rules are not imported from OSM). If this option is not used and roundabouts are not defined manually, then traffic jams will likely occur at roundabouts
+- **--ramps.guess**. Acceleration/Deceleration lanes are often not included in OSM data. This option identifies likely roads that have these additional lanes and causes them to be added
+- **--junctions.join**. See #Junctions
+- **--tls.guess-signals, --tls.discard-simple, --tls.join**. See #Traffic_Lights
 
 It tells "Success." when finish.
 
-`--> 63M Sep 27 06:45 district-of-columbia.poly.xml`
+
 
 ## 3. Importing additional Polygons (Buildings, Water, etc.)
 OSM-data not only contains the road network but also a wide range of additional polygons such as buildings and rivers. These polygons can be imported using POLYCONVERT and then added to a sumo-gui-configuration.
@@ -46,6 +46,7 @@ OSM-data not only contains the road network but also a wide range of additional 
 ```
 polyconvert --net-file district-of-columbia.net.xml --osm-files district-of-columbia-latest.osm --type-file ../../data/typemap/osmPolyconvert.typ.xml -o district-of-columbia.poly.xml
 ```
+`--> 63M Sep 27 06:45 district-of-columbia.poly.xml`
 
 It tells "Success." when finish.
 
