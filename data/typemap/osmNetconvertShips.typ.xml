@@ -1,5 +1,3 @@
-<types xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/types_file.xsd">
-    <type id="waterway.river" width="7" numLanes="1" speed="10" priority="1" oneway="false" allow="ship"/>
-    <type id="waterway.canal" width="5" numLanes="1" speed="10" priority="1" oneway="false" allow="ship"/>
-    <type id="route.ferry"    width="5" numLanes="1" speed="10" priority="2" oneway="false" allow="ship"/>
-</types>
+version https://git-lfs.github.com/spec/v1
+oid sha256:aeb5f37fd51b6eb63d99af4dd8aaab7db03c6977b67f0698c8240c0d3526eaa0
+size 462

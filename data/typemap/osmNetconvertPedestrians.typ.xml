@@ -1,10 +1,3 @@
-<types xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/types_file.xsd">
-    <type id="highway.primary"        sidewalkWidth="3" disallow="pedestrian rail rail_urban rail_electric rail_fast tram ship"/>
-    <type id="highway.primary_link"   sidewalkWidth="3" disallow="pedestrian rail rail_urban rail_electric rail_fast tram ship"/>
-    <type id="highway.secondary"      sidewalkWidth="3" disallow="pedestrian rail rail_urban rail_electric rail_fast tram ship"/>
-    <type id="highway.secondary_link" sidewalkWidth="3" disallow="pedestrian rail rail_urban rail_electric rail_fast tram ship"/>
-    <type id="highway.tertiary"       sidewalkWidth="3" disallow="pedestrian rail rail_urban rail_electric rail_fast tram ship"/>
-    <type id="highway.tertiary_link"  sidewalkWidth="2" disallow="pedestrian rail rail_urban rail_electric rail_fast tram ship"/>
-    <type id="highway.unclassified"   sidewalkWidth="2" disallow="pedestrian rail rail_urban rail_electric rail_fast tram ship"/>
-    <type id="highway.residential"    sidewalkWidth="2" disallow="pedestrian rail rail_urban rail_electric rail_fast tram ship"/>
-</types>
+version https://git-lfs.github.com/spec/v1
+oid sha256:bacd3fafc3dc7520a747d1ce2c06d09105a79ac9f4d05c8b2bea45059ee8216e
+size 1181

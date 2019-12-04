@@ -1,6 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<nodes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
-    <node id="1" x="-250.0" y="0.0" />
-    <node id="2" x="+250.0" y="0.0" />
-    <node id="3" x="+251.0" y="0.0" />
-</nodes>
+version https://git-lfs.github.com/spec/v1
+oid sha256:57c0159930f844e993b827203185ce9e14ca25655cd22fdc2bcf5c4ceb1d7b7a
+size 297

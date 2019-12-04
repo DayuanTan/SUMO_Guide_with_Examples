@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<types xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/types_file.xsd">
-    <type id="edgeType" numLanes="2" speed="36.1"/>
-</types>
+version https://git-lfs.github.com/spec/v1
+oid sha256:aa3c7a8f08f9cbd084938a665600b6d10aa957160b003fb09401e0cbb1417471
+size 232

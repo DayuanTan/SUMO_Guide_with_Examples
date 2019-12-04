@@ -1,8 +1,3 @@
-<polygonTypes>
-	<polygonType id="district" name="district" color="1,0,0" fill="f" layer="-1"/>
-	<polygonType id="area" name="area" color="0,1,0" fill="f" layer="-2"/>
-
-	<polygonType id="Det" name="detector" color="0,1,0" fill="f" layer="2"/>
-	<polygonType id="Knot" name="node" color="0,0,1" fill="f" layer="1"/>
-
-</polygonTypes>
+version https://git-lfs.github.com/spec/v1
+oid sha256:83ee5166d8c5b86bda47288c4205e47f9edb242e1772ae23b26f57df3957aed2
+size 329

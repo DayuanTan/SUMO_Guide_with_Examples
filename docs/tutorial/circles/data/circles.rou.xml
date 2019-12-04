@@ -1,4 +1,3 @@
-<routes>
-   <vType id="car" type="passenger" length="5" accel="3.5" decel="2.2" sigma="1.0" />
-   <flow id="carflow" type="car" beg="0" end="0" number="5" from="edge1" to="edge2" />
-</routes>
+version https://git-lfs.github.com/spec/v1
+oid sha256:5f026cab09a897533860dbf9a1d070cc28b6f3e60ebe39714b6f8a9e61dcda1e
+size 191
