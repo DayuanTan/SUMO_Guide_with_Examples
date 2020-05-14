@@ -65,3 +65,11 @@ This is an example using TraCI to control and change traffic lights.
 # [Generate smaller net file using OpenStreetMap (DC downtown)](./dayuan/generate2_DCdowntown.md)
 
 
+#
+# SUMO Example for Traffic Lights
+
+
+
+ref: [1 Simulation/Traffic Lights.](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html#automatically_generated_tls-programs)
+
+[2 Actuated Traffic Lights.](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html#actuated_traffic_lights)
