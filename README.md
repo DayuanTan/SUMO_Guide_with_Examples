@@ -79,7 +79,7 @@ To run it:
 
 The original TL logic (programID="0") defined in net.net.xml don't work since an additional TL logic (programID="1") is defined in add.xml which actually works. We can observe the minDur and maxDur works.
 
-
+The offcial wiki mentions the "next" option and it logic to select next phase. But I didn't see how it works in this example. So far only minDur/maxDur have been proved. 
 
 ref: [1 Simulation/Traffic Lights.](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html#automatically_generated_tls-programs)
 
