@@ -66,7 +66,18 @@ This is an example using TraCI to control and change traffic lights.
 
 
 #
-# SUMO Example for Traffic Lights
+# SUMO Example for Traffic Lights - Actuated TL (ATL)
+
+[ATL](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html#actuated_traffic_lights)
+
+[Code file: <SUMO_HOME>/tests/sumo/basic/tls/actuated/dualring_simple/](https://github.com/eclipse/sumo/blob/master/tests/sumo/basic/tls/actuated/dualring_simple)
+
+To run it:
+```
+.../dualring_simple$ sumo-gui -n net.net.xml -r input_routes.rou.xml -a "input_additional.add.xml"
+```
+
+The original TL logic (programID="0") defined in net.net.xml don't work since an additional TL logic (programID="1") is defined in add.xml which actually works. We can observe the minDur and maxDur works.
 
 
 
