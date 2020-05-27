@@ -8,8 +8,8 @@
     </input>
 
     <time>
-        <begin value="54000"/>
-        <end value="54100"/>
+        <begin value="0"/>
+        <end value="4000"/>
     </time>
 
     <processing>
