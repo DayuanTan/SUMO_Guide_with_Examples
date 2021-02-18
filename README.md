@@ -84,3 +84,8 @@ The offcial wiki mentions the "next" option and it logic to select next phase. B
 ref: [1 Simulation/Traffic Lights.](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html#automatically_generated_tls-programs)
 
 [2 Actuated Traffic Lights.](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html#actuated_traffic_lights)
+
+------
+[Building a randomTrips scenario with different vehicle types.](./vTypeDist/vTypeDist.md)
+
+This is a short tutorial about how to implement different vehicle types in one scenario composed by me. 
