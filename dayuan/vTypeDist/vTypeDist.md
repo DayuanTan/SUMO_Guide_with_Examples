@@ -3,7 +3,7 @@
 
 Sometimes we want to integrate multiple vehicle types into one scenarios to make it closer to read world traffic flow situation. There are two ways to implement it in SUMO.
 
-#### Solution 1:
+# Solution 1:
 
 1. Use randomTrips.py twice seperately to generate two route files. 
 2. Put them both in \<input>\<route-files> attributes with "," between them in ***"dayuan.grid.sumocfg"*** file.
@@ -29,7 +29,7 @@ Sometimes we want to integrate multiple vehicle types into one scenarios to make
 ```Success.```
 
 
-#### Solution 2:
+# Solution 2:
 
 Put the types into a vTypeDistribution and put the distribution id into the type attribute. Files please [***dyt_grid_test_typeDist*** directory](../dyt_grid_test_typeDist). 
 
