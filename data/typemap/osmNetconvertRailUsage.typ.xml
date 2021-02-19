@@ -1,3 +1,11 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:1f64489c806e904dbac07607b2103289af53cf2c35ce7221ffb920fa3268cce0
-size 486
+<types xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/types_file.xsd">
+
+    <!-- no extra permissions shall be added -->
+    <type id="usage.main"       disallow="all"/>
+    <type id="usage.branch"     disallow="all"/>
+    <type id="usage.industrial" disallow="all"/>
+    <type id="usage.military"   disallow="all"/>
+    <type id="usage.tourism"    disallow="all"/>
+    <type id="usage.test"       disallow="all"/>
+
+</types>

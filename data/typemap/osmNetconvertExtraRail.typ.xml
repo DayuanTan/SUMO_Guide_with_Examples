@@ -1,3 +1,5 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:2a25cff24fa641e833e6a8b5cb4eba8b8e2107fa6fd18c75faa94515fbf239c0
-size 474
+<types xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/types_file.xsd">
+    <type id="railway.narrow_gauge" numLanes="1" speed="27.78" priority="15" oneway="true"  allow="rail"/>
+    <type id="railway.monorail"     numLanes="1" speed="27.78" priority="15" oneway="true"  allow="rail_urban"/>
+    <type id="railway.funicular"    numLanes="1" speed="27.78" priority="15" oneway="true"  allow="rail_urban"/>
+</types>
