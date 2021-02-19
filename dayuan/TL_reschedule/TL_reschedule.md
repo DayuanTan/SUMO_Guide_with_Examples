@@ -10,6 +10,7 @@ Before we run the SUMO we need to prepare some needed files, showing as gray par
 
 We just need 5 nodes, the left end node, and the right end node, the top node and the bottom node, and the center node. We need to write it by hand.
 
+Be careful the node 'center' must be type="traffic_light".
 
 
 # 3. edge file (reschedule.edg.xml) and type file (reschedule.typ.xml)
@@ -37,10 +38,60 @@ We used the tool provided by SUMO to generate it.
 
 Run the following command:
 ```
-netconvert --node-files=reschedule.nod.xml --type-files=reschedule.typ.xml --edge-files=reschedule.edg.xml --output-file=reschedule.net.xml
+netconvert --node-files=reschedule.nod.xml --type-files=reschedule.typ.xml --edge-files=reschedule.edg.xml --tllogic-files=reschedule.tllogic.xml --output-file=reschedule.net.xml
 ```
 		
 It will print only one line “Success.” if it successes. And there will be one more file called reschedule.net.xml in the current directory.
+
+or use ```netconvert -c reschedule.netccfg```: 
+
+```
+$ netconvert -c reschedule.netccfg
+Loading configuration... done.
+Parsing types from 'reschedule.typ.xml'... done.
+Parsing nodes from 'reschedule.nod.xml'... done.
+Parsing edges from 'reschedule.edg.xml'... done.
+ Import done:
+   5 nodes loaded.
+   1 types loaded.
+   8 edges loaded.
+Removing self-loops... done (0ms).
+Removing empty nodes... done (0ms).
+   0 nodes removed.
+Moving network to origin... done (0ms).
+Computing turning directions... done (0ms).
+Assigning nodes to traffic lights... done (0ms).
+Sorting nodes' edges... done (0ms).
+Computing node shapes... done (1ms).
+Computing edge shapes... done (0ms).
+Computing node types... done (0ms).
+Computing priorities... done (0ms).
+Computing approached edges... done (0ms).
+Guessing and setting roundabouts... done (0ms).
+Computing approaching lanes... done (0ms).
+Dividing of lanes on approached lanes... done (0ms).
+Processing turnarounds... done (0ms).
+Rechecking of lane endings... done (0ms).
+Computing traffic light control information... done (0ms).
+Computing node logics... done (0ms).
+Computing traffic light logics... done (1ms).
+ 1 traffic light(s) computed.
+Building inner edges... done (0ms).
+-----------------------------------------------------
+Summary:
+ Node type statistics:
+  Unregulated junctions       : 0
+  Priority junctions          : 4
+  Right-before-left junctions : 0
+  Traffic light junctions      : 1
+ Network boundaries:
+  Original boundary  : 0.00,-100.00,200.00,100.00
+  Applied offset     : 0.00,100.00
+  Converted boundary : 0.00,0.00,200.00,200.00
+-----------------------------------------------------
+Writing network... done (2ms).
+Success.
+```
 
 
 # 5. Traffic demanding file
@@ -56,7 +107,8 @@ The tool we use here is “tools/randomTrips.py”.
 	
 The command is :
 ``` 
- $ ../../tools/randomTrips.py -n reschedule.net.xml -o reschedule.trips.xml -p 1 --route-file reschedule.rou.xml --allow-fringe --begin 0 --end 300 --fringe-factor 100
+python3 ../../tools/randomTrips.py -n reschedule.net.xml -o reschedule.trips.xml -p 1 --route-file reschedule.rou.xml --allow-fringe --begin 0 --end 300 --fringe-factor 100
+
 ```	
 	
 It will print:
@@ -104,7 +156,7 @@ We need sumo configuration file "reschedule.sumocfg” to run it. In which we de
 
 The command:
 ```
-$ sumo-gui -c mona.sumocfg
+$ sumo-gui -c reschedule.sumocfg
 ```
 
 It will print: 

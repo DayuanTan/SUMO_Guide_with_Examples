@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<!-- generated on Tue Sep 24 00:21:44 2019 by Eclipse SUMO GUI Version 1.2.0
+<!-- generated on Fri Feb 19 03:33:28 2021 by Eclipse SUMO GUI Version 1.3.1
 <configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
 
     <input>
-        <net-file value="dayuan.cross.net.xml"/>
-        <route-files value="dayuan.cross.rou.xml"/>
-        <additional-files value="dayuan.cross.det.xml"/>
+        <net-file value="data/dayuan.cross.net.xml"/>
+        <route-files value="data/dayuan.cross.rou.xml"/>
+        <additional-files value="data/dayuan.cross.det.xml"/>
     </input>
+
+    <output>
+        <tripinfo-output value="tripinfo.xml"/>
+    </output>
 
     <time>
         <begin value="0"/>
@@ -18,12 +22,17 @@
         <no-step-log value="true"/>
     </report>
 
+    <traci_server>
+        <remote-port value="51073"/>
+    </traci_server>
+
     <gui_only>
-        <gui-settings-file value="dayuan.cross.settings.xml"/>
+        <gui-settings-file value="data/dayuan.cross.settings.xml"/>
     </gui_only>
 
 </configuration>
 -->
 
 <detector xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/det_e1_file.xsd">
+    <interval begin="0.00" end="28.00" id="0" nVehContrib="2" flow="257.14" occupancy="9.07" speed="9.69" harmonicMeanSpeed="9.45" length="12.00" nVehEntered="2"/>
 </detector>

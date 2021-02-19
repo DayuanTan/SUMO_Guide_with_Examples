@@ -1,0 +1,389 @@
+Loading configuration... done.
+PATH: ['/Users/dyt/Library/Mobile Documents/com~apple~CloudDocs/1myfiles/DrYounis/19-08-IoV_SmartTraffic/v5_paper1_comparion/sumo_MyGithub/SUMO_dy_public/dayuan/TL_reschedule', '/Library/Frameworks/Python.framework/Versions/3.7/lib/python37.zip', '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7', '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/lib-dynload', '/Users/dyt/Library/Python/3.7/lib/python/site-packages', '/Library/Frameworks/Python.framework/Versions/3.7/lib/python3.7/site-packages', '/usr/local/opt/sumo/share/sumo/tools', '/usr/local/Cellar/sumo/1.3.1/share/sumo/tools']
+ Retrying in 1 seconds
+current step:  1.0
+vehicles info on edge ltoc: 
+()
+vehicles info on edge ctol: 
+()
+current step:  2.0
+vehicles info on edge ltoc: 
+()
+vehicles info on edge ctol: 
+()
+current step:  3.0
+vehicles info on edge ltoc: 
+('2',)
+vehicles info on edge ctol: 
+()
+vehicle ID:  2 speed:  0.0
+vehicle ID:  2 acceleration:  0.0
+vehicle ID:  2 position:  (5.1, 95.2)
+current step:  4.0
+vehicles info on edge ltoc: 
+('2',)
+vehicles info on edge ctol: 
+()
+vehicle ID:  2 speed:  1.8798571447376162
+vehicle ID:  2 acceleration:  1.8798571447376162
+vehicle ID:  2 position:  (6.979857144737616, 95.2)
+current step:  5.0
+vehicles info on edge ltoc: 
+('2',)
+vehicles info on edge ctol: 
+()
+vehicle ID:  2 speed:  3.8211460547521714
+vehicle ID:  2 acceleration:  1.9412889100145552
+vehicle ID:  2 position:  (10.801003199489788, 95.2)
+current step:  6.0
+vehicles info on edge ltoc: 
+('2',)
+vehicles info on edge ctol: 
+()
+vehicle ID:  2 speed:  6.248432177538052
+vehicle ID:  2 acceleration:  2.4272861227858806
+vehicle ID:  2 position:  (17.04943537702784, 95.2)
+current step:  7.0
+vehicles info on edge ltoc: 
+('2',)
+vehicles info on edge ctol: 
+()
+vehicle ID:  2 speed:  8.035812895651906
+vehicle ID:  2 acceleration:  1.7873807181138543
+vehicle ID:  2 position:  (25.085248272679745, 95.2)
+current step:  8.0
+vehicles info on edge ltoc: 
+('7', '2')
+vehicles info on edge ctol: 
+()
+vehicle ID:  7 speed:  0.0
+vehicle ID:  7 acceleration:  0.0
+vehicle ID:  7 position:  (5.1, 95.2)
+vehicle ID:  2 speed:  9.848482324043289
+vehicle ID:  2 acceleration:  1.8126694283913825
+vehicle ID:  2 position:  (34.93373059672304, 95.2)
+current step:  9.0
+vehicles info on edge ltoc: 
+('7', '2')
+vehicles info on edge ctol: 
+()
+vehicle ID:  7 speed:  2.499824955314398
+vehicle ID:  7 acceleration:  2.499824955314398
+vehicle ID:  7 position:  (7.599824955314397, 95.2)
+vehicle ID:  2 speed:  11.744763945788145
+vehicle ID:  2 acceleration:  1.8962816217448566
+vehicle ID:  2 position:  (46.67849454251118, 95.2)
+current step:  10.0
+vehicles info on edge ltoc: 
+('2', '7')
+vehicles info on edge ctol: 
+()
+vehicle ID:  2 speed:  12.749758587643413
+vehicle ID:  2 acceleration:  1.0049946418552675
+vehicle ID:  2 position:  (59.428253130154594, 95.2)
+vehicle ID:  7 speed:  4.623031414905563
+vehicle ID:  7 acceleration:  2.1232064595911653
+vehicle ID:  7 position:  (12.222856370219962, 98.4)
+current step:  11.0
+vehicles info on edge ltoc: 
+('2', '7')
+vehicles info on edge ctol: 
+()
+vehicle ID:  2 speed:  13.229812520794479
+vehicle ID:  2 acceleration:  0.4800539331510656
+vehicle ID:  2 position:  (72.65806565094907, 95.2)
+vehicle ID:  7 speed:  7.088776683062315
+vehicle ID:  7 acceleration:  2.465745268156752
+vehicle ID:  7 position:  (19.31163305328228, 98.4)
+current step:  12.0
+vehicles info on edge ltoc: 
+('2', '7')
+vehicles info on edge ctol: 
+()
+vehicle ID:  2 speed:  9.7231772921325
+vehicle ID:  2 acceleration:  -3.5066352286619793
+vehicle ID:  2 position:  (82.38124294308157, 95.2)
+vehicle ID:  7 speed:  8.611895439703948
+vehicle ID:  7 acceleration:  1.523118756641633
+vehicle ID:  7 position:  (27.92352849298623, 98.4)
+current step:  13.0
+vehicles info on edge ltoc: 
+('2', '7')
+vehicles info on edge ctol: 
+()
+vehicle ID:  2 speed:  5.376124043778729
+vehicle ID:  2 acceleration:  -4.34705324835377
+vehicle ID:  2 position:  (87.7573669868603, 95.2)
+vehicle ID:  7 speed:  10.664703435148112
+vehicle ID:  7 acceleration:  2.052807995444164
+vehicle ID:  7 position:  (38.58823192813434, 98.4)
+current step:  14.0
+vehicles info on edge ltoc: 
+('2', '7')
+vehicles info on edge ctol: 
+('0',)
+vehicle ID:  2 speed:  1.3553003256139644
+vehicle ID:  2 acceleration:  -4.020823718164765
+vehicle ID:  2 position:  (89.11266731247427, 95.2)
+vehicle ID:  7 speed:  11.664688031814167
+vehicle ID:  7 acceleration:  0.9999845966660548
+vehicle ID:  7 position:  (50.252919959948514, 98.4)
+current step:  15.0
+vehicles info on edge ltoc: 
+('14', '2', '7')
+vehicles info on edge ctol: 
+('0',)
+vehicle ID:  14 speed:  0.0
+vehicle ID:  14 acceleration:  0.0
+vehicle ID:  14 position:  (5.1, 95.2)
+vehicle ID:  2 speed:  0.3712310589049581
+vehicle ID:  2 acceleration:  -0.9840692667090063
+vehicle ID:  2 position:  (89.48389837137923, 95.2)
+vehicle ID:  7 speed:  11.74745440967019
+vehicle ID:  7 acceleration:  0.08276637785602325
+vehicle ID:  7 position:  (62.00037436961869, 98.4)
+current step:  16.0
+vehicles info on edge ltoc: 
+('14', '2', '7')
+vehicles info on edge ctol: 
+('0',)
+vehicle ID:  14 speed:  2.076878232625313
+vehicle ID:  14 acceleration:  2.076878232625313
+vehicle ID:  14 position:  (7.176878232625312, 95.2)
+vehicle ID:  2 speed:  0.009529340347190763
+vehicle ID:  2 acceleration:  -0.36170171855776734
+vehicle ID:  2 position:  (89.49342771172641, 95.2)
+vehicle ID:  7 speed:  11.404762358843456
+vehicle ID:  7 acceleration:  -0.3426920508267344
+vehicle ID:  7 position:  (73.40513672846215, 98.4)
+current step:  17.0
+vehicles info on edge ltoc: 
+('15', '2', '14', '7')
+vehicles info on edge ctol: 
+('4', '0')
+vehicle ID:  15 speed:  0.0
+vehicle ID:  15 acceleration:  0.0
+vehicle ID:  15 position:  (5.1, 95.2)
+vehicle ID:  2 speed:  0.002820376756013037
+vehicle ID:  2 acceleration:  -0.006708963591177726
+vehicle ID:  2 position:  (89.49624808848243, 95.2)
+vehicle ID:  14 speed:  4.482499223412015
+vehicle ID:  14 acceleration:  2.405620990786702
+vehicle ID:  14 position:  (11.659377456037328, 98.4)
+vehicle ID:  7 speed:  9.521900892579817
+vehicle ID:  7 acceleration:  -1.8828614662636394
+vehicle ID:  7 position:  (82.92703762104198, 98.4)
+current step:  18.0
+vehicles info on edge ltoc: 
+('15', '2', '14', '7')
+vehicles info on edge ctol: 
+('4', '0')
+vehicle ID:  15 speed:  1.3909307999070735
+vehicle ID:  15 acceleration:  1.3909307999070735
+vehicle ID:  15 position:  (6.490930799907073, 95.2)
+vehicle ID:  2 speed:  0.0014316589605079637
+vehicle ID:  2 acceleration:  -0.0013887177955050735
+vehicle ID:  2 position:  (89.49767974744294, 95.2)
+vehicle ID:  14 speed:  6.745676532341167
+vehicle ID:  14 acceleration:  2.2631773089291523
+vehicle ID:  14 position:  (18.405053988378494, 98.4)
+vehicle ID:  7 speed:  5.021900892579817
+vehicle ID:  7 acceleration:  -4.5
+vehicle ID:  7 position:  (87.9489385136218, 98.4)
+current step:  19.0
+vehicles info on edge ltoc: 
+('15', '2', '14')
+vehicles info on edge ctol: 
+('4', '0')
+vehicle ID:  15 speed:  3.6274733198806643
+vehicle ID:  15 acceleration:  2.236542519973591
+vehicle ID:  15 position:  (10.118404119787737, 95.2)
+vehicle ID:  2 speed:  0.0012281670972337968
+vehicle ID:  2 acceleration:  -0.00020349186327416687
+vehicle ID:  2 position:  (89.49890791454018, 95.2)
+vehicle ID:  14 speed:  9.24848545046989
+vehicle ID:  14 acceleration:  2.5028089181287223
+vehicle ID:  14 position:  (27.65353943884838, 98.4)
+current step:  20.0
+vehicles info on edge ltoc: 
+('16', '2', '15', '14')
+vehicles info on edge ctol: 
+('4', '0')
+vehicle ID:  16 speed:  0.0
+vehicle ID:  16 acceleration:  0.0
+vehicle ID:  16 position:  (5.1, 95.2)
+vehicle ID:  2 speed:  0.0
+vehicle ID:  2 acceleration:  -0.0012281670972337968
+vehicle ID:  2 position:  (89.49890791454018, 95.2)
+vehicle ID:  15 speed:  5.912213190481998
+vehicle ID:  15 acceleration:  2.2847398706013333
+vehicle ID:  15 position:  (16.030617310269733, 98.4)
+vehicle ID:  14 speed:  11.337865370395594
+vehicle ID:  14 acceleration:  2.0893799199257046
+vehicle ID:  14 position:  (38.991404809243974, 98.4)
+current step:  21.0
+vehicles info on edge ltoc: 
+('16', '2', '15', '14')
+vehicles info on edge ctol: 
+('7', '4')
+vehicle ID:  16 speed:  1.6286410189932212
+vehicle ID:  16 acceleration:  1.6286410189932212
+vehicle ID:  16 position:  (6.728641018993221, 95.2)
+vehicle ID:  2 speed:  0.0
+vehicle ID:  2 acceleration:  0.0
+vehicle ID:  2 position:  (89.49890791454018, 95.2)
+vehicle ID:  15 speed:  7.541713003884069
+vehicle ID:  15 acceleration:  1.629499813402071
+vehicle ID:  15 position:  (23.572330314153806, 98.4)
+vehicle ID:  14 speed:  13.703914021787464
+vehicle ID:  14 acceleration:  2.3660486513918695
+vehicle ID:  14 position:  (52.695318831031436, 98.4)
+current step:  22.0
+vehicles info on edge ltoc: 
+('18', '2', '16', '15', '14')
+vehicles info on edge ctol: 
+('7', '4')
+vehicle ID:  18 speed:  0.0
+vehicle ID:  18 acceleration:  0.0
+vehicle ID:  18 position:  (5.1, 95.2)
+vehicle ID:  2 speed:  0.0
+vehicle ID:  2 acceleration:  0.0
+vehicle ID:  2 position:  (89.49890791454018, 95.2)
+vehicle ID:  16 speed:  4.141014234349131
+vehicle ID:  16 acceleration:  2.51237321535591
+vehicle ID:  16 position:  (10.869655253342351, 98.4)
+vehicle ID:  15 speed:  9.430526618123986
+vehicle ID:  15 acceleration:  1.8888136142399174
+vehicle ID:  15 position:  (33.00285693227779, 98.4)
+vehicle ID:  14 speed:  13.381136926420263
+vehicle ID:  14 acceleration:  -0.3227770953672007
+vehicle ID:  14 position:  (66.0764557574517, 98.4)
+current step:  23.0
+vehicles info on edge ltoc: 
+('18', '2', '16', '15', '14')
+vehicles info on edge ctol: 
+('7', '4')
+vehicle ID:  18 speed:  2.2362889320822434
+vehicle ID:  18 acceleration:  2.2362889320822434
+vehicle ID:  18 position:  (7.336288932082242, 95.2)
+vehicle ID:  2 speed:  0.0
+vehicle ID:  2 acceleration:  0.0
+vehicle ID:  2 position:  (89.49890791454018, 95.2)
+vehicle ID:  16 speed:  5.868856000690721
+vehicle ID:  16 acceleration:  1.72784176634159
+vehicle ID:  16 position:  (16.73851125403307, 98.4)
+vehicle ID:  15 speed:  10.952793962415308
+vehicle ID:  15 acceleration:  1.522267344291322
+vehicle ID:  15 position:  (43.95565089469309, 98.4)
+vehicle ID:  14 speed:  11.39254160949945
+vehicle ID:  14 acceleration:  -1.9885953169208133
+vehicle ID:  14 position:  (77.46899736695114, 98.4)
+current step:  24.0
+vehicles info on edge ltoc: 
+('18', '2', '16', '15', '14')
+vehicles info on edge ctol: 
+('7',)
+vehicle ID:  18 speed:  4.519978091702797
+vehicle ID:  18 acceleration:  2.283689159620554
+vehicle ID:  18 position:  (11.85626702378504, 95.2)
+vehicle ID:  2 speed:  0.0
+vehicle ID:  2 acceleration:  0.0
+vehicle ID:  2 position:  (89.49890791454018, 95.2)
+vehicle ID:  16 speed:  8.055260647530668
+vehicle ID:  16 acceleration:  2.1864046468399465
+vehicle ID:  16 position:  (24.79377190156374, 98.4)
+vehicle ID:  15 speed:  12.844997740671232
+vehicle ID:  15 acceleration:  1.892203778255924
+vehicle ID:  15 position:  (56.800648635364325, 98.4)
+vehicle ID:  14 speed:  7.281719367827604
+vehicle ID:  14 acceleration:  -4.110822241671846
+vehicle ID:  14 position:  (84.75071673477875, 98.4)
+current step:  25.0
+vehicles info on edge ltoc: 
+('21', '18', '2', '16', '15', '14')
+vehicles info on edge ctol: 
+('7',)
+vehicle ID:  21 speed:  0.0
+vehicle ID:  21 acceleration:  0.0
+vehicle ID:  21 position:  (5.1, 95.2)
+vehicle ID:  18 speed:  6.629290392366239
+vehicle ID:  18 acceleration:  2.1093123006634418
+vehicle ID:  18 position:  (18.48555741615128, 95.2)
+vehicle ID:  2 speed:  0.0
+vehicle ID:  2 acceleration:  0.0
+vehicle ID:  2 position:  (89.49890791454018, 95.2)
+vehicle ID:  16 speed:  10.086878674733452
+vehicle ID:  16 acceleration:  2.031618027202784
+vehicle ID:  16 position:  (34.880650576297185, 98.4)
+vehicle ID:  15 speed:  11.200324148431047
+vehicle ID:  15 acceleration:  -1.644673592240185
+vehicle ID:  15 position:  (68.00097278379538, 98.4)
+vehicle ID:  14 speed:  4.340093187530217
+vehicle ID:  14 acceleration:  -2.941626180297387
+vehicle ID:  14 position:  (89.09080992230896, 98.4)
+current step:  26.0
+vehicles info on edge ltoc: 
+('21', '18', '2', '16', '15')
+vehicles info on edge ctol: 
+('7',)
+vehicle ID:  21 speed:  1.8638813930097968
+vehicle ID:  21 acceleration:  1.8638813930097968
+vehicle ID:  21 position:  (6.963881393009796, 95.2)
+vehicle ID:  18 speed:  8.415969092119488
+vehicle ID:  18 acceleration:  1.7866786997532484
+vehicle ID:  18 position:  (26.90152650827077, 95.2)
+vehicle ID:  2 speed:  0.0
+vehicle ID:  2 acceleration:  0.0
+vehicle ID:  2 position:  (89.49890791454018, 95.2)
+vehicle ID:  16 speed:  12.124270358678464
+vehicle ID:  16 acceleration:  2.037391683945012
+vehicle ID:  16 position:  (47.00492093497565, 98.4)
+vehicle ID:  15 speed:  7.731662278396239
+vehicle ID:  15 acceleration:  -3.4686618700348077
+vehicle ID:  15 position:  (75.73263506219162, 98.4)
+current step:  27.0
+vehicles info on edge ltoc: 
+('26', '18', '2', '21', '16', '15')
+vehicles info on edge ctol: 
+('14', '7')
+vehicle ID:  26 speed:  0.0
+vehicle ID:  26 acceleration:  0.0
+vehicle ID:  26 position:  (5.1, 95.2)
+vehicle ID:  18 speed:  10.405568420328201
+vehicle ID:  18 acceleration:  1.9895993282087137
+vehicle ID:  18 position:  (37.30709492859897, 95.2)
+vehicle ID:  2 speed:  0.0
+vehicle ID:  2 acceleration:  0.0
+vehicle ID:  2 position:  (89.49890791454018, 95.2)
+vehicle ID:  21 speed:  3.570852866722271
+vehicle ID:  21 acceleration:  1.7069714737124744
+vehicle ID:  21 position:  (10.534734259732067, 98.4)
+vehicle ID:  16 speed:  12.07309586249436
+vehicle ID:  16 acceleration:  -0.05117449618410319
+vehicle ID:  16 position:  (59.07801679747002, 98.4)
+vehicle ID:  15 speed:  6.841154718145625
+vehicle ID:  15 acceleration:  -0.8905075602506143
+vehicle ID:  15 position:  (82.57378978033725, 98.4)
+current step:  28.0
+vehicles info on edge ltoc: 
+('26', '18', '2', '21', '16', '15')
+vehicles info on edge ctol: 
+('14', '7')
+vehicle ID:  26 speed:  1.3028633899986743
+vehicle ID:  26 acceleration:  1.3028633899986743
+vehicle ID:  26 position:  (6.402863389998674, 95.2)
+vehicle ID:  18 speed:  12.040566819483574
+vehicle ID:  18 acceleration:  1.6349983991553731
+vehicle ID:  18 position:  (49.347661748082544, 95.2)
+vehicle ID:  2 speed:  0.0
+vehicle ID:  2 acceleration:  0.0
+vehicle ID:  2 position:  (89.49890791454018, 95.2)
+vehicle ID:  21 speed:  6.0607036363799125
+vehicle ID:  21 acceleration:  2.4898507696576413
+vehicle ID:  21 position:  (16.59543789611198, 98.4)
+vehicle ID:  16 speed:  10.060421484194285
+vehicle ID:  16 acceleration:  -2.0126743783000762
+vehicle ID:  16 position:  (69.13843828166429, 98.4)
+vehicle ID:  15 speed:  5.157193747439476
+vehicle ID:  15 acceleration:  -1.6839609707061491
+vehicle ID:  15 position:  (87.73098352777673, 98.4)
