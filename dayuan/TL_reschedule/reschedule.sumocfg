@@ -5,6 +5,7 @@
     <input>
         <net-file value="reschedule.net.xml"/>
         <route-files value="reschedule.rou.xml"/>
+        <tllogic-files value="reschedule.tllogic.xml">
     </input>
 
     <time>
