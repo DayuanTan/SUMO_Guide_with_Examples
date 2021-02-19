@@ -42,7 +42,7 @@ def run():
     while traci.simulation.getMinExpectedNumber() > 0:# run until all vehicles have arrived
         traci.simulationStep() # forward one step
 
-        print("current step: ", traci.simulation.getTime())
+        print("\n\n\ncurrent step: ", traci.simulation.getTime())
         
         print("vehicles info on edge ltoc: ")
         v_IDs_on_edge1 = traci.edge.getLastStepVehicleIDs("ltoc")
