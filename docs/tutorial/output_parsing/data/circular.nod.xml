@@ -1,3 +1,7 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:7708b59bea49d20128df88d2fe810577ea7e4d0b2dd299a4578e34825ada5f11
-size 367
+<?xml version="1.0" encoding="UTF-8"?>
+<nodes version="0.13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/nodes_file.xsd">
+    <node id="bottom-left" x="0" y="0"/>
+    <node id="bottom-right" x="1250" y="0"/>
+    <node id="top-right" x="1250" y="1250"/>
+    <node id="top-left" x="0" y="1250"/>
+</nodes>

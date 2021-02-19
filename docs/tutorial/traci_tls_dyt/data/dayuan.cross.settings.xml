@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:39a0ee670f1c0ef942e91db4452aa4014d92b09aa2a7de4e879c87d41a57a87e
-size 97
+	<viewsettings>
+		<viewport y="100" x="300" zoom="100"/>
+		<delay value="100"/>
+	</viewsettings>

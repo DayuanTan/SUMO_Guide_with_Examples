@@ -1,3 +1,13 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ef6909dadaade2ff711e6871011f40dd735f22e1e5c525df806a0a0a4eb76768
-size 291
+<additionals>
+    <rerouter id="rerouter_0" edges="edge1">	
+		<interval end="1e3">
+		   <destProbReroute id="edge2"/>
+		</interval>
+	</rerouter>
+    <rerouter id="rerouter_1" edges="edge2">
+		<interval end="1e3">
+		   <destProbReroute id="edge1"/>
+		</interval>
+	</rerouter>
+</additionals>
+

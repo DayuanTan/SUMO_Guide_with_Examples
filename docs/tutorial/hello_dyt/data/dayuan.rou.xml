@@ -1,3 +1,38 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:ce9cf31eae395637cfe072e5bc93c9424df79bf98c17b3c8f2283e465dd2455d
-size 2009
+<?xml version="1.0" encoding="UTF-8"?>
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/routes_file.xsd">
+  <vType accel="1.0" decel="5.0" id="Car" length="5.0" minGap="2.0" maxSpeed="50.0" sigma="0" />
+
+  <route id="route0" edges="4to5 5to6 6to9 9to3 3to12" />
+  <route id="route1" edges="4to5 5to8 8to9 9to3 3to12" />
+  <route id="route2" edges="4to5 5to8 8to1 1to11 11to12" />
+  <route id="route3" edges="4to7 7to8 8to1 1to3 3to12" />
+  <route id="route4" edges="4to7 7to2 2to1 1to3 3to12" />
+  <route id="route5" edges="4to7 7to2 2to10 10to11 11to12" />
+
+  
+
+
+  <vehicle depart="1" id="veh0" route="route0" type="Car" />
+  <vehicle depart="2" id="veh1" route="route1" type="Car" />
+  <vehicle depart="3" id="veh2" route="route2" type="Car" />
+  <vehicle depart="4" id="veh3" route="route3" type="Car" />
+  <vehicle depart="5" id="veh4" route="route4" type="Car" />
+  <vehicle depart="6" id="veh5" route="route5" type="Car" />
+  <vehicle depart="7" id="veh6" route="route0" type="Car" />
+  <vehicle depart="8" id="veh7" route="route1" type="Car" />
+  <vehicle depart="9" id="veh8" route="route2" type="Car" />
+  <vehicle depart="10" id="veh9" route="route3" type="Car" />
+  <vehicle depart="11" id="veh10" route="route4" type="Car" />
+  <vehicle depart="12" id="veh11" route="route5" type="Car" />
+  <vehicle depart="13" id="veh12" route="route0" type="Car" />
+  <vehicle depart="14" id="veh13" route="route1" type="Car" />
+  <vehicle depart="15" id="veh14" route="route2" type="Car" />
+  <vehicle depart="16" id="veh15" route="route3" type="Car" />
+  <vehicle depart="17" id="veh16" route="route4" type="Car" />
+  <vehicle depart="18" id="veh17" route="route5" type="Car" />
+  <vehicle depart="19" id="veh18" route="route0" type="Car" />
+  <vehicle depart="20" id="veh19" route="route1" type="Car" />
+  <vehicle depart="21" id="veh20" route="route2" type="Car" />
+  <vehicle depart="22" id="veh21" route="route4" type="Car" />
+
+</routes>

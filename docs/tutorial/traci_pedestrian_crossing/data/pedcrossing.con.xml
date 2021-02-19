@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:63e130ea992e561ed6333897b302b72ab1917384004a9da5910c46751e1b1252
-size 262
+<?xml version="1.0" encoding="UTF-8"?>
+<connections version="0.13" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/connections_file.xsd">
+    <crossing node="C" edges="CE EC" width="6"/>
+</connections>

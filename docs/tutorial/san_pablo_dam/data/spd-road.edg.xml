@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:0d6d71d59fa7de3925807fd8df65d901607dc4707aeb5dc9138ed1705aa48e9a
-size 159
+<edges>
+    <edge from="obs1" id="1to7" to="obs7" numLanes="1" speed="40.0" />
+    <edge from="obs7" id="7to8" to="obs8" numLanes="1" speed="40.0" />
+</edges>

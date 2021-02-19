@@ -1,3 +1,4 @@
-version https://git-lfs.github.com/spec/v1
-oid sha256:e25d4907b9a4e288f78d31be10627c840c2cbda11a97691d4cc98ef69682b9a6
-size 173
+<routes>
+    <flow id="EW" begin="0" end="3600" probability="0.1" from="EC" to="CW"/>
+    <flow id="WE" begin="0" end="3600" probability="0.1" from="WC" to="CE"/>
+</routes>
