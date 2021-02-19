@@ -86,6 +86,13 @@ ref: [1 Simulation/Traffic Lights.](https://sumo.dlr.de/docs/Simulation/Traffic_
 [2 Actuated Traffic Lights.](https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html#actuated_traffic_lights)
 
 ------
-[Building a randomTrips scenario with different vehicle types.](./vTypeDist/vTypeDist.md)
+# [Building a randomTrips scenario with different vehicle types.](./dayuan//vTypeDist/vTypeDist.md)
 
 This is a short tutorial about how to implement different vehicle types in one scenario composed by me. 
+
+------
+# [How to change traffic lights schedule while sumo running?](./dayuan/TL_reschedule/TL_reschedule.md)
+
+This is a tutorial about how to change the current/default traffic lights schedule while sumo running, which will be useful for those traffic lights dynamic re-schedule project.
+
+

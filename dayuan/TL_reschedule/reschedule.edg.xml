@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<edges xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/edges_file.xsd">
+    <edge from="left" id="ltoc" to="center" type="a"/>
+    <edge from="center" id="ctol" to="left" type="a"/>
+
+    <edge from="right" id="rtoc" to="center" type="a"/>
+    <edge from="center" id="ctor" to="right" type="a"/>
+
+    <edge from="top" id="totoc" to="center" type="a"/>
+    <edge from="center" id="ctot" to="top" type="a"/>
+
+    <edge from="bottom" id="btoc" to="center" type="a"/>
+    <edge from="center" id="ctob" to="bottom" type="a"/>
+    
+
+</edges>

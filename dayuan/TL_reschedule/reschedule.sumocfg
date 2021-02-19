@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="reschedule.net.xml"/>
+        <route-files value="reschedule.rou.xml"/>
+    </input>
+
+    <time>
+        <begin value="0"/>
+        <end value="300"/>
+    </time>
+ 
+
+    <gui_only>
+        <gui-settings-file value="dayuan.view.settings.xml"/>
+    </gui_only>
+</configuration>
