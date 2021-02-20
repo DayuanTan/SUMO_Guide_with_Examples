@@ -44,24 +44,35 @@ def run():
 
         print("\n\n\ncurrent step: ", traci.simulation.getTime())
         
-        print("vehicles info on edge ltoc: ")
-        v_IDs_on_edge1 = traci.edge.getLastStepVehicleIDs("ltoc")
-        print(v_IDs_on_edge1)
-
-        print("vehicles info on edge ctol: ")
-        v_IDs_on_edge2 = traci.edge.getLastStepVehicleIDs("ctol")
-        print(v_IDs_on_edge2)
+        # print("vehicles info on edge ltoc: ")
+        # v_IDs_on_edge1 = traci.edge.getLastStepVehicleIDs("ltoc")
+        # print(v_IDs_on_edge1)
+        # print("vehicles info on edge ctol: ")
+        # v_IDs_on_edge2 = traci.edge.getLastStepVehicleIDs("ctol")
+        # print(v_IDs_on_edge2)
+        # # add something here to implement your algorithm
+        # for v_IDs_i in v_IDs_on_edge1:
+        #     print("vehicle ID: ", v_IDs_i, "speed: ", traci.vehicle.getSpeed(v_IDs_i))
+        #     print("vehicle ID: ", v_IDs_i, "acceleration: ", traci.vehicle.getAcceleration(v_IDs_i))
+        #     print("vehicle ID: ", v_IDs_i, "position: ", traci.vehicle.getPosition(v_IDs_i))
 
         
-        
-        # add something here to implement your algorithm
-        for v_IDs_i in v_IDs_on_edge1:
-            print("vehicle ID: ", v_IDs_i, "speed: ", traci.vehicle.getSpeed(v_IDs_i))
-            print("vehicle ID: ", v_IDs_i, "acceleration: ", traci.vehicle.getAcceleration(v_IDs_i))
-            print("vehicle ID: ", v_IDs_i, "position: ", traci.vehicle.getPosition(v_IDs_i))
+        # print the traffic light information
+        print("[TL id]:", "center")
+        phaseCurrentStep = traci.trafficlight.getPhase("center")
+        print("[Phase]:", phaseCurrentStep)
+        print("[Phase duration]:",traci.trafficlight.getPhaseDuration("center"))
+        print("[Phase Name]:", traci.trafficlight.getPhaseName("center"))
+        print("[Program]:", traci.trafficlight.getProgram("center"))
+        print("[getRedYellowGreenState]:", traci.trafficlight.getRedYellowGreenState("center"))
+        allProgramLogicInThisTL = traci.trafficlight.getCompleteRedYellowGreenDefinition("center")
+        print("[getAllProgramLogics]:", allProgramLogicInThisTL) # output is 'logic' data structure
+        allPhasesOfThisProgramLogicInThisTL = allProgramLogicInThisTL[0].getPhases() # get content
+        print("[phases all]:", allPhasesOfThisProgramLogicInThisTL)
+        phasesTotalAmount = len(allPhasesOfThisProgramLogicInThisTL)
+        print("[phasesTotalAmount]:", phasesTotalAmount) # the length is how much phases this TL program logic has in one cycle
 
-        # store those parameters into some vairables which can be used later when needed. 
-
+        # set new traffic lights
 
         step += 1
     traci.close()
