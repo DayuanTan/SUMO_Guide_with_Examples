@@ -40,6 +40,7 @@ def run():
     step = 0
     phasePreviousStep = -1
     cycleCounter = 0
+    lastPhaseStepCounter = 0
     
     # while traci.simulation.getTime() < 300:
     while traci.simulation.getMinExpectedNumber() > 0:# run until all vehicles have arrived
@@ -65,7 +66,7 @@ def run():
         phaseCurrentStep = traci.trafficlight.getPhase("center")
         print("[phaseCurrentStep]:", phaseCurrentStep)
         print("[phasePreviousStep]:", phasePreviousStep)
-        print("[Phase duration]:",traci.trafficlight.getPhaseDuration("center"))
+        print("[Phase duration]:", traci.trafficlight.getPhaseDuration("center"))
         print("[Phase Name]:", traci.trafficlight.getPhaseName("center"))
         print("[Program]:", traci.trafficlight.getProgram("center"))
         print("[getRedYellowGreenState]:", traci.trafficlight.getRedYellowGreenState("center"))
@@ -81,7 +82,7 @@ def run():
             cycleCounter += 1
         print("[Cycle Counter]:", cycleCounter)
 
-        # phase 0 is 42s + 3s + 42s + 3s from time 0 to time 90.
+        # cycle 0 is 42s + 3s + 42s + 3s from time 0 to time 90.
         # set new traffic lights
         if (phaseCurrentStep == 0) and (phasePreviousStep == phasesTotalAmount - 1):
             if (cycleCounter == 1):
@@ -108,7 +109,26 @@ def run():
                 traci.trafficlight.setCompleteRedYellowGreenDefinition("center", newLogic)
                 # it works but it's not early enough. it will finish a phase with 42s (from time 204 to time 245)
                 # before our newLogic (after time 246)
+                # cylce 3: 42s + 5s + 5s + 5s, from time 204 to time 245, to time 260.
 
+        if (phaseCurrentStep == phasesTotalAmount - 1) and (phasePreviousStep == phasesTotalAmount - 2):
+            lastPhaseStepCounter = 0
+        if (phaseCurrentStep == phasesTotalAmount - 1):
+            lastPhaseStepCounter += 1
+            print("lastPhaseStepCounter: ", lastPhaseStepCounter)
+            if (cycleCounter == 3): # wait for the last step of cycle 3 to setup logic for cycle 4
+                if (lastPhaseStepCounter == traci.trafficlight.getPhaseDuration("center")):
+                    print("bingo! ")
+                    # class Phase __init__(self, duration, state, minDur=-1, maxDur=-1, next=(), name='')
+                    p1 = traci.trafficlight.Phase(6, "GGGggrrrrrGGGggrrrrr", 6, 6, "", "")
+                    p2 = traci.trafficlight.Phase(4, "yyyyyrrrrryyyyyrrrrr", 4, 4, "", "")
+                    p3 = traci.trafficlight.Phase(6, "rrrrrGGGggrrrrrGGGgg", 6, 6, "", "")
+                    p4 = traci.trafficlight.Phase(4, "rrrrryyyyyrrrrryyyyy", 4, 4, "", "")
+                    # class Logic __init__(self, programID, type, currentPhaseIndex, phases=None, subParameter=None)
+                    newLogic = traci.trafficlight.Logic("0", 0, 0, [p1, p2, p3, p4], {})
+                    traci.trafficlight.setCompleteRedYellowGreenDefinition("center", newLogic)
+                    # this doesn't work
+                    # it cannot recognize p1, its cycle has only phase p2 p3 p4 and repeat without p1
 
 
 
