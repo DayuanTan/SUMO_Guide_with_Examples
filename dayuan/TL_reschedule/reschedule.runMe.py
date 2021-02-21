@@ -37,6 +37,7 @@ import traci.constants as tc # used for subscription
 def run():
     """execute the TraCI control loop"""
     step = 0
+    phasePreviousStep = -1
     
     # while traci.simulation.getTime() < 300:
     while traci.simulation.getMinExpectedNumber() > 0:# run until all vehicles have arrived
@@ -60,7 +61,8 @@ def run():
         # print the traffic light information
         print("[TL id]:", "center")
         phaseCurrentStep = traci.trafficlight.getPhase("center")
-        print("[Phase]:", phaseCurrentStep)
+        print("[phaseCurrentStep]:", phaseCurrentStep)
+        print("[phasePreviousStep]:", phasePreviousStep)
         print("[Phase duration]:",traci.trafficlight.getPhaseDuration("center"))
         print("[Phase Name]:", traci.trafficlight.getPhaseName("center"))
         print("[Program]:", traci.trafficlight.getProgram("center"))
@@ -73,8 +75,13 @@ def run():
         print("[phasesTotalAmount]:", phasesTotalAmount) # the length is how much phases this TL program logic has in one cycle
 
         # set new traffic lights
+        if (phaseCurrentStep == 0) and (phasePreviousStep == phasesTotalAmount - 1):
+            traci.trafficlight.setPhaseDuration("center", 13)
 
+        # for next simulation step
         step += 1
+        phasePreviousStep = phaseCurrentStep
+
     traci.close()
     sys.stdout.flush()
 
