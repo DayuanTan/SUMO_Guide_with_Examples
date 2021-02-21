@@ -38,6 +38,7 @@ def run():
     """execute the TraCI control loop"""
     step = 0
     phasePreviousStep = -1
+    cycleCounter = 0
     
     # while traci.simulation.getTime() < 300:
     while traci.simulation.getMinExpectedNumber() > 0:# run until all vehicles have arrived
@@ -76,7 +77,12 @@ def run():
 
         # set new traffic lights
         if (phaseCurrentStep == 0) and (phasePreviousStep == phasesTotalAmount - 1):
+            cycleCounter += 1
+            # success set a new phase duration
             traci.trafficlight.setPhaseDuration("center", 13)
+        print("[Cycle Counter]:", cycleCounter)
+
+        
 
         # for next simulation step
         step += 1

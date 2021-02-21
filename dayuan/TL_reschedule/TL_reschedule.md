@@ -169,5 +169,7 @@ Loading configuration... done.
 "rechecule.runMe.py"
 
 
-https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html#controlling_traffic_lights_via_traci
+Ref: https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html#controlling_traffic_lights_via_traci
 
+Which functions to use?
+https://sumo.dlr.de/docs/TraCI/Change_Traffic_Lights_State.html
