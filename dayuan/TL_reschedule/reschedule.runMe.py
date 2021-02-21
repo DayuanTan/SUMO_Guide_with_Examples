@@ -32,6 +32,7 @@ else:
 from sumolib import checkBinary  
 import traci  
 import traci.constants as tc # used for subscription
+import traci._trafficlight
 
 
 def run():
@@ -68,21 +69,48 @@ def run():
         print("[Phase Name]:", traci.trafficlight.getPhaseName("center"))
         print("[Program]:", traci.trafficlight.getProgram("center"))
         print("[getRedYellowGreenState]:", traci.trafficlight.getRedYellowGreenState("center"))
-        allProgramLogicInThisTL = traci.trafficlight.getCompleteRedYellowGreenDefinition("center")
+        allProgramLogicInThisTL = traci.trafficlight.getCompleteRedYellowGreenDefinition("center") #=getAllProgramLogics()
         print("[getAllProgramLogics]:", allProgramLogicInThisTL) # output is 'logic' data structure
         allPhasesOfThisProgramLogicInThisTL = allProgramLogicInThisTL[0].getPhases() # get content
         print("[phases all]:", allPhasesOfThisProgramLogicInThisTL)
         phasesTotalAmount = len(allPhasesOfThisProgramLogicInThisTL)
         print("[phasesTotalAmount]:", phasesTotalAmount) # the length is how much phases this TL program logic has in one cycle
 
-        # set new traffic lights
+        
         if (phaseCurrentStep == 0) and (phasePreviousStep == phasesTotalAmount - 1):
             cycleCounter += 1
-            # success set a new phase duration
-            traci.trafficlight.setPhaseDuration("center", 13)
         print("[Cycle Counter]:", cycleCounter)
 
+        # phase 0 is 42s + 3s + 42s + 3s from time 0 to time 90.
+        # set new traffic lights
+        if (phaseCurrentStep == 0) and (phasePreviousStep == phasesTotalAmount - 1):
+            if (cycleCounter == 1):
+                # set a new phase duration only for second cycle (from time 91 to time 152)
+                # 13s + 3s + 42s + 3s = 61s
+                traci.trafficlight.setPhaseDuration("center", 13)
+                # then the third cycle it will change back to default duration 42s
         
+            if (cycleCounter == 2):
+                # set the third cycle to start from phase 2,  
+                # but actually sumo won't do it immediately, from north side aspect, it will take 3s green and 3s for yellow than change to phase2(red)
+                # so it has totally phase 0 (3s) phase 1 (3s) phase 2 (42s) and phase 3 (3s) = 51s (from time 152 to time 203) and go to next cycle
+                traci.trafficlight.setPhaseDuration("center", 2)
+
+            if (cycleCounter == 3):
+                
+                # class Phase __init__(self, duration, state, minDur=-1, maxDur=-1, next=(), name='')
+                p1 = traci.trafficlight.Phase(5, "GGGggrrrrrGGGggrrrrr", 5, 5, "", "")
+                p2 = traci.trafficlight.Phase(5, "yyyyyrrrrryyyyyrrrrr", 5, 5, "", "")
+                p3 = traci.trafficlight.Phase(5, "rrrrrGGGggrrrrrGGGgg", 5, 5, "", "")
+                p4 = traci.trafficlight.Phase(5, "rrrrryyyyyrrrrryyyyy", 5, 5, "", "")
+                # class Logic __init__(self, programID, type, currentPhaseIndex, phases=None, subParameter=None)
+                newLogic = traci.trafficlight.Logic("0", 0, 0, [p1, p2, p3, p4], {})
+                traci.trafficlight.setCompleteRedYellowGreenDefinition("center", newLogic)
+                # it works but it's not early enough. it will finish a phase with 42s (from time 204 to time 245)
+                # before our newLogic (after time 246)
+
+
+
 
         # for next simulation step
         step += 1

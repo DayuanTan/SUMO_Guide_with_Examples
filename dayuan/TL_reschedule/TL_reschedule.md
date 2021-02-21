@@ -38,12 +38,32 @@ We used the tool provided by SUMO to generate it.
 
 Run the following command:
 ```
-netconvert --node-files=reschedule.nod.xml --type-files=reschedule.typ.xml --edge-files=reschedule.edg.xml --tllogic-files=reschedule.tllogic.xml --output-file=reschedule.net.xml
+netconvert --node-files=reschedule.nod.xml --type-files=reschedule.typ.xml --edge-files=reschedule.edg.xml --output-file=reschedule.net.xml
 ```
 		
 It will print only one line “Success.” if it successes. And there will be one more file called reschedule.net.xml in the current directory.
 
-or use ```netconvert -c reschedule.netccfg```: 
+It will generate the default traffic light logic inside the net.xml:
+```
+    <tlLogic id="center" type="static" programID="0" offset="0">
+        <phase duration="42" state="GGGggrrrrrGGGggrrrrr"/>
+        <phase duration="3"  state="yyyyyrrrrryyyyyrrrrr"/>
+        <phase duration="42" state="rrrrrGGGggrrrrrGGGgg"/>
+        <phase duration="3"  state="rrrrryyyyyrrrrryyyyy"/>
+    </tlLogic>
+```
+   
+
+PS:
+```
+ $ netconvert --node-files=reschedule.nod.xml --type-files=reschedule.typ.xml --edge-files=reschedule.edg.xml --tllogic-files=reschedule.tllogic.xml --output-file=reschedule.net.xml
+Error: Invalid linkIndex 16 for traffic light 'center' with 16 links.
+Quitting (on error).
+```
+
+## or use ```netconvert -c reschedule.netccfg```: 
+
+The default traffic light logic inside the net.xml is totally same as above.
 
 ```
 $ netconvert -c reschedule.netccfg
