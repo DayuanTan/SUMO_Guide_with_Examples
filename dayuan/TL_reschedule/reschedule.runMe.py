@@ -111,6 +111,7 @@ def run():
                 # before our newLogic (after time 246)
                 # cylce 3: 42s + 5s + 5s + 5s, from time 204 to time 245, to time 260.
 
+        # define and use a new traffic logic
         if (phaseCurrentStep == phasesTotalAmount - 1) and (phasePreviousStep == phasesTotalAmount - 2):
             lastPhaseStepCounter = 0
         if (phaseCurrentStep == phasesTotalAmount - 1):
