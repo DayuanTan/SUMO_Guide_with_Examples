@@ -130,8 +130,10 @@ def run():
                     # this doesn't work
                     # it cannot recognize p1, its cycle has only phase p2 p3 p4 and repeat without p1
 
-                    # try add this setPhase 
+                    # try add this setPhase and it success
                     traci.trafficlight.setPhase("center", 0)
+                    # check log log.2021.02.21.0310_trynewlogic_correct_time.txt (failed) and 
+                    # log.2021.02.23.1800_trynewlogic_correct_time.txt (successed) from time261
 
 
         # for next simulation step
