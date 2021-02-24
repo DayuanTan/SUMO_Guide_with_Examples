@@ -130,6 +130,8 @@ def run():
                     # this doesn't work
                     # it cannot recognize p1, its cycle has only phase p2 p3 p4 and repeat without p1
 
+                    # try add this setPhase 
+                    traci.trafficlight.setPhase("center", 0)
 
 
         # for next simulation step
