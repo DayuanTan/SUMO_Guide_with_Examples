@@ -18,6 +18,7 @@ Files tree:
 |- - [generateNetfileOSM.md](dayuan/generateNetfileOSM.md), [generate2_DCdowntown.md](dayuan/generate2_DCdowntown.md)|f|About generate net file using OSM.|
 |- - [vTypeDist](dayuan/vTypeDist)|d|How to set up different vehicle types in SUMO.|
 |- - [TL_reschedule](dayuan/TL_reschedule)|d|How to change/reschedule traffic lights cycles.|
+|- - [platoon](dayuan/platoon)|d|Setup platoon and get platoon info.|
 |- - imgs|d|Some screenshots or recording vedios for my projects or examples.|
 ||
 
@@ -98,3 +99,8 @@ This is a tutorial about how to change the current/default traffic lights schedu
 
 
 ------
+# [How to setup platoon and get platoon information?](./dayuan/platoon/platoon.md)
+
+There is no official good way to get platoon information like which vehicles are forming platoon. 
+
+I found a way that to check vehicle type. Those vehicles which are in platoons their vehicle type will be changed. 
