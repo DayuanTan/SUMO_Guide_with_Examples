@@ -3,9 +3,6 @@
 This includes [**SUMO offical packages**](https://github.com/eclipse/sumo). 
 
 
-Check Google Drive for introductions about how to run her code provided by Sookyoung. 
-
-
 Files tree:
 
 |Dir path|Dir or File|Notes|
@@ -17,6 +14,10 @@ Files tree:
 |- dayuan|d|My sumo projects, examples.|
 |- - [aSimpleSumo.md](aSimpleSumo.md)|f|My example for a simple road net.|
 |- - [2ndSimpleSumo.md](2ndSimpleSumo.md)|f|My 2nd SUMO example. A bit more complex then above one.|
+|- - [3rdSumoTraCI.md](3rdSumoTraCI.md)|f|Third exmaple about how to use TraCI.|
+|- - [generateNetfileOSM.md](generateNetfileOSM.md), [generate2_DCdowntown.md](generate2_DCdowntown.md)|f|About generate net file using OSM.|
+|- - [vTypeDist](vTypeDist)|d|How to set up different vehicle types in SUMO.|
+|- - [TL_reschedule](TL_reschedule)|d|How to change/reschedule traffic lights cycles.|
 |- - imgs|d|Some screenshots or recording vedios for my projects or examples.|
 ||
 
@@ -96,3 +97,4 @@ This is a short tutorial about how to implement different vehicle types in one s
 This is a tutorial about how to change the current/default traffic lights schedule while sumo running, which will be useful for those traffic lights dynamic re-schedule project.
 
 
+------
