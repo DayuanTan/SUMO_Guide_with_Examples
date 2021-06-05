@@ -194,9 +194,12 @@ Ref: https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html#controlling_traffic
 Which functions to use?
 https://sumo.dlr.de/docs/TraCI/Change_Traffic_Lights_State.html
 
-See [reschedule.runMe.py](reschedule.runMe.py) showing multiple ways to change different values of next cycle or phase.
+See [reschedule.runMe.py](reschedule.runMe.py) showing multiple ways to change different values of next cycle or phase. Corresponding log is "log.2021.02.23.1800_trynewlogic_correct_time_success.txt".
 
 About define and use a new traffic logic please see ***line 114 to 137***. **The key question is to determine when to set the new TL**. The answer should be the last simulation step of current cycle, before the first simulation step of next cycle. That why I used "lastPhaseStepCounter".
 
 (Line 81 to 98 tried how to use *setPhaseDuration*. Line 100 to 112 tried how to use a new logic but have an issue.)
 
+---
+
+See [reschedule.GreenLightExtender.runMe.py](reschedule.GreenLightExtender.runMe.py) and [log.2021.06.04.16.45.GLE.md](log.2021.06.04.16.45.GLE.md) and [tripinfo.2021.06.04.16.45.GLE.xml](output/tripinfo.2021.06.04.16.45.GLE.xml) shows only to extend green lights duration at end of each green light. 
