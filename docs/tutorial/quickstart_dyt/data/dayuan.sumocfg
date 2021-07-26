@@ -9,7 +9,7 @@
 
     <time>
         <begin value="0"/>
-        <end value="4000"/>
+        <end value="400000"/>
     </time>
 
     <processing>

@@ -17,7 +17,7 @@ Routes are set up in configuration file "[dayuan.rou.xml](../docs/tutorial/hello
 
 "[dayuan.sumocfg](../docs/tutorial/hello_dyt/data/dayuan.sumocfg)" and "[dayuan.settings.xml](../docs/tutorial/hello_dyt/data/dayuan.settings.xml)" are also needed when you use `sumo-gui`.
 
-Then just run command `sumo-gui -c hello.sumocfg` under same directory, you will see the SUMO GUI window. Click start then the simulation will begin.
+Then just run command `sumo-gui -c dayuan.sumocfg` under same directory, you will see the SUMO GUI window. Click start then the simulation will begin.
 
 Here are some screenshots of this simulation.
 <img src="./imgs/hello_dyt/1.png"/>
