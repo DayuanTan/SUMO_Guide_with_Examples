@@ -23,6 +23,9 @@ The definitions of the attributes in the node file are listed below.
 - (c) ***y***: the y-coordinate location of the defined node (in meters)
 - (d) ***type***: the signal control type of the defined node. It is an optional attribute and defined with priority and traffic_light for unsignalized and signalized intersections respectively.
 
+### Node type
+This is where different from first two examples.
+
 ## Step 2: Edges (links)
 
 All edges (road segments, or called "link" in SUMO) are set up in ["dayuan.cross.edg.xml"](../docs/tutorial/traci_tls_dyt/data/dayuan.cross.edg.xml) file.
