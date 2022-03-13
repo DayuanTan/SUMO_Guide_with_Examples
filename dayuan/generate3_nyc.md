@@ -3,6 +3,8 @@
 ## 1. Download OSM file from OSM website.
 I followed this page. Go to the [OSM website](https://planet.openstreetmap.org). Select "geofabrik". Find the city you want. I choose NYC.
 
+![](imgs/planetosm.png)
+
 There are multiple formats. I choose this format:
 
     Other Formats and Auxiliary Files
