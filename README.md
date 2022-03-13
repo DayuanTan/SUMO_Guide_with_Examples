@@ -66,6 +66,8 @@ This is an example using TraCI to control and change traffic lights.
 
 # [Generate smaller net file using OpenStreetMap (DC downtown)](./dayuan/generate2_DCdowntown.md)
 
+# [Generate NYC road net file using OpenStreetMap (updated 3/12/2022)](./dayuan/generate3_nyc.md)
+
 
 #
 # SUMO Example for Traffic Lights - Actuated TL (ATL)
