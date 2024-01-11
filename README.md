@@ -106,3 +106,7 @@ This is a tutorial about how to change the current/default traffic lights schedu
 There is no official good way to get platoon information like which vehicles are forming platoon. 
 
 I found a way that to check vehicle type. Those vehicles which are in platoons their vehicle type will be changed. 
+
+After SUMO 1.19.0 https://github.com/DayuanTan/simpla_official_example_run
+
+
